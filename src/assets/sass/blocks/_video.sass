@@ -1,0 +1,56 @@
+.video
+	.btn
+		margin-top: rem(40px)
+.video-link
+	position: relative
+	width: 100%
+	padding-right: rem(52px)
+	+media(992px)
+		margin-bottom: rem(40px)
+	img
+		width: 100%
+	&:hover
+		.icon
+			transform: rotate(360deg)
+.video-icon
+	@extend %gr
+	position: absolute
+	width: rem(104px)
+	height: rem(104px)
+	right: 0
+	border-radius: 50%
+	top: 0
+	transition: $transition
+	display: flex
+	align-items: center
+	justify-content: center
+	border: rem(13px) solid #fff
+	box-sizing: content-box
+	z-index: 5
+	.icon
+		font-size: rem(27px)
+		transition: all 1s ease
+		color: #ffffff
+		transform-origin: 38% 50%
+
+.video__text
+	ul
+		margin-bottom: rem(30px)
+		+media(992px)
+			padding-left: rem(30px)
+	li
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			top: rem(7px)
+			left: rem(-24px)
+			width: rem(12px)
+			height: rem(12px)
+			background-image: url(../img/icons/list-arrow.png)
+			background-repeat: no-repeat
+			background-size: cover
+	p
+		font-size: rem(18px)
+		font-weight: 300
+		color: $text-ligth

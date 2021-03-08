@@ -1,0 +1,213 @@
+header
+.top-line__row
+	display: flex
+	justify-content: space-between
+	align-items: center
+	+media(992px)
+		display: none
+.top-line__menu
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	padding-top: 13px
+	padding-bottom: 13px
+	border-bottom: 1px solid #f0f0f0
+	li
+		margin-right: rem(25px)
+		&:last-child
+			margin-right: 0
+		a, span
+			display: inline-block
+			font-size: rem(18px)
+			color: $text
+			font-family: $second
+			text-decoration: none
+			transition: $transition
+			line-height: rem(33px)
+			position: relative
+			z-index: 2
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				width: 0
+				height: 100%
+				background-color: #f0f6fc
+				transition: $transition
+				z-index: -1
+			&:hover
+				color: $accent
+				&::before
+					width: rem(16px)
+		&.active
+			a, span
+				color: $accent
+				&::before
+					width: rem(16px)
+.header__middle-line
+	padding-top: rem(23px)
+	padding-bottom: rem(16px)
+.middle-line__row
+	display: flex
+	align-items: center
+	justify-content: space-between
+.header__info-block
+	display: flex
+	align-items: center
+	.icon
+		fill: url(#my-cool-gradient) 
+		margin-right: rem(16px)
+		font-size: rem(18px)
+		
+	p
+		margin-bottom: 0
+		font-size: rem(18px)
+		font-family: $second
+		line-height: rem(27px)
+		white-space: nowrap
+.header__info-block--phone
+	justify-content: flex-end
++media(1200px)
+	.header__info-block--adress
+		display: none
++media(992px)
+	.header__info-block--opening-hours
+		display: none
++media(768px)
+	.header__info-block--main
+		display: none
+.header__bottom-line
+	+media(992px)
+		display: none
+	@extend %gr
+	nav
+		ul
+			display: flex
+			justify-content: space-between
+		li
+			position: relative
+			&:hover
+				>.dropdown-menu
+					opacity: 1
+					visibility: visible
+				a, span
+					color: $text
+		a, span
+			color: #fff
+			display: inline-block
+			padding: rem(16px) 0
+			transition: $transition
+			font-size: rem(18px)
+			font-size: $second
+		&.active
+			a, span
+				color: $text
+	.dropdown-menu
+		position: absolute
+		left: 0
+		background-color: #fff
+		z-index: 10
+		opacity: 0
+		visibility: hidden
+		transition: $transition
+		transform: translate(0)
+		ul
+			flex-direction: column
+			width: max-content
+			align-content: stretch
+		li
+			display: flex
+			position: relative
+			flex-grow: 1
+			align-self: normal
+			&:hover
+				background-color: rgba($ligth-gray, .8)
+				.dropdown-menu
+					opacity: 1
+					transform: translateY(0)
+					visibility: visible
+				>a, span
+					color: $accent
+			&.has-menu
+				&::before
+					content: '>'
+					font-size: rem(18px)
+					position: absolute
+					right: rem(19px)
+					top: 50%
+					transform: translateY(-50%)
+		a, span
+			font-family: $second
+			color: $text
+			font-size: rem(18px)
+			padding-right: rem(80px)
+			padding-left: rem(29px)
+			display: block
+			width: 100%
+	li.level2 .dropdown-menu
+		position: absolute
+		left: 100%
+		background-color: #fff
+		box-shadow: 0 0 9px rgba(26, 21, 20, 0.5)
+		opacity: 0
+		transform: translateY(30px)
+		transition: transform .3s ease
+		visibility: hidden
+		li
+			&:hover
+				a, span
+					color: $accent
+			a, span
+				padding-right: rem(30px)
+.header__modile-line
+	@extend %gr
+	padding: rem(10px) 0
+	display: none
+	+media(992px)
+		display: block
+.gamburger__btn
+	width: 40px
+	height: 40px
+	background-color: transparent
+	padding: 0
+	position: relative
+	span
+		width: 24px
+		height: 2px
+		background-color: #fff
+		display: block
+		position: absolute
+		left: 50%
+		top: 50%
+		margin-top: -1px
+		margin-left: -12px
+		&::before, &::after
+			content: ''
+			position: absolute
+			left: 0
+			width: 24px
+			height: 2px
+			background-color: #fff
+		&::before
+			top: 7px
+		&::after
+			top: -7px
+.mobile__search-btn
+	background-color: transparent
+	padding: 0
+	margin: 0
+	display: flex
+	align-items: center
+	justify-content: center
+	color: #fff
+	font-size: 18px
+	margin-left: auto
+	line-height: 40px
+	height: 40px
+	span
+		margin-left: 8px
+	.icon
+		color: #fff
+
+

@@ -1,0 +1,218 @@
+p
+	font-size: rem(18px)
+	margin-bottom: 1rem
+	&:last-child
+		margin-bottom: 0
+ul
+	padding: 0
+	align-items: start
+	margin: 0
+	li
+		list-style-type: none
+.content
+	blockquote
+		width: 80%
+		padding: rem(15px)
+		margin-left: rem(40px)
+		padding-left: rem(40px)
+		background-color: $ligth-gray
+		font-style: italic
+		font-family: $font
+		font-size: rem(16px)
+		border-left: 4px solid
+		border-image: linear-gradient(to bottom, #0094dd 0%, #b9ffea) 1 100%
+		+media(575px)
+			width: 100%
+			margin-left: 0
+
+	h3
+		font-size: rem(24px)
+		text-transform: none
+		text-align: left
+		margin-bottom: .5rem
+	ul
+		margin: 0
+		padding: 0
+		margin-bottom: rem(30px)
+		margin-left: rem(30px)
+		+media(992px)
+			padding-left: rem(30px)
+		&.three-column
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+			li
+				width: 33.333%
+				+media(992px)
+					width: 50%
+				+media(585px)
+					width: 100%
+	li
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			top: rem(7px)
+			left: rem(-24px)
+			width: rem(12px)
+			height: rem(12px)
+			background-image: url(../img/icons/list-arrow.png)
+			background-repeat: no-repeat
+			background-size: cover
+	p
+		font-size: rem(18px)
+		color: $text
+		line-height: 1.5
+		font-weight: 300
+	strong
+		color: $accent
+		font-weight: bold
+	a
+		color: $accent
+		text-decoration: underline
+	h4
+		font-size: rem(20px)
+		font-weight: bold
+		margin-top: rem(25px)
+		margin-bottom: rem(25px)
+		line-height: 1.5
+		font-family: $font
+	img
+	.border-images
+		margin-right: rem(40px)
+		margin-bottom: rem(50px)
+		margin-top: rem(50px)
+		float: left
+		display: inline-block
+.igree
+	text-align: center
+	p
+		font-weight: 300
+figure
+	margin: 0
+a
+	color: $text
+	transition: color .3s ease
+	display: inline-block
+	&:hover
+		color: $accent
+		text-decoration: none
+h3, .h3
+	font-size: rem(30px)
+	text-align: center
+	margin-bottom: rem(40px)
+	text-transform: uppercase
+ol
+	padding-left: rem(20px)
+	margin-bottom: rem(30px)
+	li
+		margin-bottom: rem(10px)
+.title-center
+	display: flex
+	justify-content: center
+	text-align: center
+.has-subtitle
+	flex-direction: column
+	align-items: center
+	.decore-title
+		margin-bottom: rem(16px)
+.section-bg
+	background-color: $accent-bg
+	.decore-title
+		span.first
+			&::before
+				background-image: url(../img/icons/title-decore--white.png)
+strong
+	color: $text-ligth
+.decore-title, p.decore-title
+	font-size: rem(30px)
+	font-family: $title
+	font-weight: bold
+	position: relative
+	z-index: 2
+	margin: 0
+	margin-bottom: rem(40px)
+	line-height: 1.2
+	display: inline-block
+	span.last
+		color: $accent
+	span.first
+		position: relative
+		display: inline-block
+		padding: rem(18px) 0
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: rem(22px)
+			width: rem(64px)
+			height: rem(72px)
+			background-image: url(../img/icons/title-decore.png)
+			background-position: center
+			background-size: contain
+			background-repeat: no-repeat
+			z-index: -1
+	&--white
+		span.first
+			&::before
+				background-image: url(../img/icons/title-decore--white.png)
+	&--noimage
+		span
+			&::before
+				display: none
+	&--no-last
+		span.last
+			color: inherit
+.decore-title__group
+	.decore-title
+		margin-bottom: 0
+		line-height: 1
+.inner_title, .content .inner_title
+	font-size: rem(22px)
+	font-weight: 700
+	font-family: $title
+	color: $color-title
+.subtitle
+	p
+		font-size: rem(18px)
+		font-family: $font
+		color: $text-ligth
+		font-weight: 300
+		line-height: 1.5
+.hover-link
+	position: absolute
+	left: 0
+	right: 0
+	top: 0
+	bottom: 0
+	font-size: 0
+	z-index: 4
+.border-images
+	position: relative
+	padding: 0 rem(31px)
+	text-align: center
+	z-index: -1
+	display: inline-block
+	&::before
+		content: ''
+		position: absolute
+		left: 0
+		top: -10px
+		right: 0
+		bottom: 0
+		border: 9px solid $color-border
+		transform: skewY(-6deg)
+.section-spacer
+	margin-top: rem(70px)
+	margin-bottom: rem(70px)
+.section-spacer--inner
+	padding-top: rem(70px)
+	padding-bottom: rem(70px)
+.img-center
+	margin: 0 auto
+	display: block
+.img-scale__wrapper
+	overflow: hidden
+	img
+		transition: all 2s ease 
+		transition: all 2s ease 

@@ -1,0 +1,32 @@
+.tooltip
+	position: absolute;
+	top: rem(-16px);
+	right: rem(-16px);
+	cursor: pointer;
+	&:hover
+		.tooltip__content
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0px);
+	.icon
+		font-size: rem(16px);
+		fill: $icon-fill;
+
+.tooltip__content
+	position: absolute;
+	width: 200px;
+	padding: rem(10px) rem(15px);
+	right: -100px;
+	transform: translateY(30px);
+	font-size: rem(16px);
+	font-family: $font;
+	text-align: center;
+	color: $text;
+	font-weight: normal;
+	background-color: #fff;
+	box-shadow: $shadow;
+	opacity: 0;
+	visibility: hidden;
+	transition: $transition;
+	+media(1400px)
+		right: 0;

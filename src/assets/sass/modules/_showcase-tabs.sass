@@ -1,0 +1,33 @@
+.showcase-tabs
+	.showcase-tabs__header
+		display: flex
+		justify-content: center
+		ul
+			display: flex
+			position: relative
+			padding: rem(30px) rem(50px)
+			box-shadow: 0px 0px 14px 5px #f0f0f0
+			li
+				margin-right: rem(40px)
+				&:last-child
+					margin-right: 0
+				&.active, &:hover
+					.tab_item
+						span
+							color: $accent
+						.icon
+							fill: $icon-fill
+		.tab_item
+			cursor: pointer
+			span
+				font-size: rem(20px)
+				font-weight: bold
+				font-family: $title
+				color: #7c7b7b
+			.icon
+				fill: #7c7b7b
+				font-size: rem(40px)
+				margin-right: rem(20px)
+
+.showcase-tabs__content.active
+	display: block!important

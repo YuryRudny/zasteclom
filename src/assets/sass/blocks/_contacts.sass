@@ -1,0 +1,64 @@
+.contacts-page
+	.title-block
+		padding: rem(100px) 0
+		background-color: $accent-bg
+		position: relative
+		z-index: 1
+	.decore-title, p.decore-title
+		margin-bottom: 0
+	.contacts-row
+		margin: 0
+		+media(992px)
+			margin-left: -15px
+			margin-right: -15px
+	.contact-cart
+		flex-grow: 1
+		position: relative
+		z-index: 2
+		margin-top: rem(-30px)
+		text-align: center
+		padding: rem(30px)
+		background-color: #fff
+		box-shadow: $shadow
+		+media(992px)
+			margin-top: rem(60px)
+	.contacts-cart__title
+		font-size: rem(22px)
+		font-weight: bold
+		font-family: $title
+		margin-bottom: rem(20px)
+		padding-bottom: rem(20px)
+		border-bottom: 1px solid $color-border
+		display: inline-block
+	.contacts-cart__icon
+		width: rem(80px)
+		height: rem(80px)
+		border-radius: 50%
+		background-color: $accent-bg
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-left: auto
+		margin-right: auto
+		margin-top: rem(-75px)
+		margin-bottom: rem(30px)
+		.icon
+			font-size: rem(35px)
+			fill: $icon-fill
+.contacts-form
+	.form__title
+		font-family: $title
+		font-size: rem(30px)
+		font-weight: bold
+		margin-bottom: rem(20px)
+		color: $color-title
+		&--small
+			font-size: rem(18px)
+			margin-bottom: 0
+			line-height: 1
+.contacts-map
+	height: 400px
+	background-image: url(../img/backgrounds/map.jpg)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: left center

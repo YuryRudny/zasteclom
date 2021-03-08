@@ -1,0 +1,75 @@
+.gallery-accordion
+	background-image: url(../img/backgrounds/gallery-accordion-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	.gallery-container
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: rem(1160px);
+		margin: 0 auto;
+		padding: 0 rem(15px);
+		+media(1200px)
+			flex-direction: column-reverse;
+			align-items: center;
+			max-width: 100%
+			padding: 0;
+
+.gallery-accordion__title
+	margin-bottom: rem(30px);
+	width: 25%;
+	+media(1200px)
+		width: 100%;
+		align-self: stretch;
+	p
+		font-family: $title;
+		font-size: rem(24px);
+		font-weight: bold;
+		text-align: right;
+		+media(1200px)
+			text-align: center;
+			padding-top: rem(30px);
+.gallery-accordion__list
+	display: flex;
+	height: 100%;
+	overflow: hidden;
+	width: 75%;
+	padding-right: rem(30px);
+	+media(1200px)
+		width: 100%;
+		align-self: stretch;
+		padding-right: 0;
+
+.gallery-accordion__item
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	padding-bottom: rem(40px);
+	width: 15%
+	transition: $transition
+	height: rem(277px);
+	&:hover
+		width: 56%;
+	&:nth-child(1)
+		background-color: rgba(#000, .95);
+	&:nth-child(2)
+		background-color: rgba(#000, .85);
+	&:nth-child(3)
+		background-color: rgba(#000, .8);
+	&:nth-child(4)
+		background-color: rgba(#000, .7);
+	&:nth-child(5)
+		background-color: rgba(#000, .65);
+	&:nth-child(6)
+		background-color: rgba(#000, .6);
+	&:nth-child(7)
+		background-color: rgba(#000, .5);
+		margin-right: -5px;
+	span
+		color: #fff;
+		font-size: 24px;
+		font-weight: bold;
+		font-family: $title;
+		+media(585px)
+			font-size: rem(16px);

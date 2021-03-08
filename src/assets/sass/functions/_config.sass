@@ -1,0 +1,114 @@
+@import "functions/function"
+html,
+body 
+  height: 100%
+  font-size: #{($root-font-size)}
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $color-border
+	color: $text
+
+.align-center
+	display: flex
+	align-items: center
+h1, h2, h3, h4, h5, h6
+	font-family: $title
+.hidden
+	display: none!important
+.flex-center
+	display: flex
+	justify-content: flex-start
+	align-items: flex-start
+img, button
+	user-select: none
+	-webkit-user-drag: none
+.text-center
+	text-align: center
+.text-right
+	text-align: right
+img
+	max-width: 100%
+.img-width
+	width: 100%
+body
+	min-width: 320px
+	position: relative
+	line-height: 1.5
+	font-family: $font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+	&.fix
+		overflow: hidden
+.icon 
+	display: inline-block
+	width: 1em
+	height: 1em
+	fill: currentColor
+	stroke-width: 2
+b, strong
+	font-weight: bold
+button
+	border: none
+	outline: none
+	cursor: pointer
+	&:focus
+		outline: none
+
+.mb-0
+	margin-bottom: 0
+.mb-20
+	margin-bottom: rem(20px)!important
+.mb-30
+	margin-bottom: rem(30px)!important
+.mb-40
+	margin-bottom: rem(40px)!important
+.mb-50
+	margin-bottom: rem(50px)!important
+.mb-60
+	margin-bottom: rem(60px)!important
+.mt-20
+	margin-top: rem(20px)!important
+.mt-30
+	margin-top: rem(30px)!important
+.mt-40
+	margin-top: rem(40px)!important
+.mt-50
+	margin-top: rem(50px)!important
+.mt-60
+	margin-top: rem(60px)!important
+.pt-20
+	padding-top: rem(20px)!important
+.pt-30
+	padding-top: rem(30px)!important
+.pt-40
+	padding-top: rem(40px)!important
+.pt-50
+	padding-top: rem(50px)!important
+.pt-60
+	padding-top: rem(60px)!important
+.pb-20
+	padding-bottom: rem(20px)!important
+.pb-30
+	padding-bottom: rem(30px)!important
+.pb-40
+	padding-bottom: rem(40px)!important
+.pb-50
+	padding-bottom: rem(50px)!important
+.pb-60
+	padding-bottom: rem(60px)!important
+.p-0
+	padding: 0!important
+.pt-0
+	padding-top: 0!important
+.pb-0
+	padding-bottom: 0!important
+@import "media"

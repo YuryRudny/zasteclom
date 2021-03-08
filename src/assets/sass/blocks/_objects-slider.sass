@@ -1,0 +1,136 @@
+.gallery-section
+	position: relative
+	.inner-section
+		position: relative
+		padding-bottom: rem(70px)
+		background-repeat: no-repeat
+		background-size: cover
+		&::before
+			content: ''
+			@extend %position-cover
+			@extend %gr
+			opacity: .8
+
+		.title-box
+			position: relative
+			padding: rem(70px) 0px
+			background-color: $accent-bg
+
+	.carousel-box
+		position: relative
+		margin-top: rem(-100px)
+		.object-gallery_hover
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				right: 0
+				top: 0
+				bottom: 0
+				transition: all .3s ease				
+				z-index: 2
+			.hover-zoom__icon
+				opacity: 0
+				@extend %position-center
+				transform: translateY(-80%)
+				transition: all .3s ease
+				z-index: 5
+		.ms-sl-selected .object-gallery_hover:hover
+			.hover-zoom__icon
+				opacity: 1
+				transform: translateY(-50%)
+			&::before
+				background-color: rgba(#000006, .3)
+		.image
+			position: relative				
+			&:before
+				position: absolute
+				content: ''
+				left: 0px
+				top: 0px
+				width: 100%
+				display: block
+				height: 100%
+				z-index: 1
+				background-color: rgba(0, 0, 0, 0.7)
+				transition: $transition
+			img
+				position: relative
+				width: 100%
+				height: 100%
+				object-fit: cover
+				display: block
+
+		.content-layer h4
+			position: relative
+			color: #ffffff
+			text-align: center
+			font-size: rem(22px)
+			font-weight: 500
+			margin-top: rem(22px)
+			opacity: 0
+			visibility: hidden
+			transition: $transition
+
+			a
+				position: relative
+				color: #ffffff
+
+	.ms-skin-default
+		.ms-nav-next
+			position: absolute
+			right: rem(-180px)
+			top: 50%
+			z-index: 1
+			cursor: pointer
+			color: #ffffff
+			font-size: 42px
+			font-weight: 500
+			margin-top: -66px
+			transition: all 0.3s ease
+			&::before
+				font-family: swiper-icons
+				content: 'next'
+
+		.ms-nav-prev
+			left: rem(-180px)
+			opacity: 1 !important
+			display: block
+
+		.ms-ctrl-hide
+			opacity: 1 !important
+			display: block
+
+		.ms-nav-prev
+			position: absolute
+			top: 50%
+			z-index: 1
+			cursor: pointer
+			color: #ffffff
+			font-size: 42px
+			font-weight: 500
+			margin-top: -66px
+			transition: all 0.3s ease
+			&::before
+				font-family: swiper-icons
+				content: 'prev'
+
+	.ms-sl-selected .content-layer h4
+		opacity: 1 !important
+		visibility: visible
+
+	.ms-caro3d-template .ms-slide
+		opacity: 1 !important
+
+	.ms-sl-selected .content-layer .image::before
+		opacity: 0
+		visibility: hidden
+
+.auto-container 
+	position: static
+	max-width: rem(1200px)
+	padding: 0px rem(15px)
+	margin: 0 auto
+.ms-caro3d-template 
+	margin: 0 auto

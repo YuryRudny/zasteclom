@@ -1,0 +1,41 @@
+.arrow-left
+	.slider-arrows
+		justify-content: flex-start;
+.slider-arrows
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	margin-top: rem(40px);
+.slider-button
+	width: rem(43px)
+	height: rem(43px)
+	border-radius: 50%
+	border: rem(1px) solid #555555
+	background-color: #fff
+	display: flex
+	align-items: center
+	justify-content: center
+	cursor: pointer
+	margin-right: rem(8px)
+	&:last-child
+		margin-right: 0
+	.icon
+		color: #555555
+		font-size: rem(20px)
+.vertical-slider
+	position: relative
+	.slider-arrows
+		flex-direction: column
+		position: absolute
+		right: rem(-73px)
+		top: 50%
+		margin-top: rem(-47px)
+		width: rem(42px)
+	.slider-button
+		transform: rotate(90deg)
+		margin-right: 0
+		margin-bottom: rem(8px)
+		&:last-child
+			margin-bottom: 0
+

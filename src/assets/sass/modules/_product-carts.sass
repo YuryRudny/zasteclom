@@ -1,0 +1,107 @@
+.product__section
+	.product__showcase--no_popup
+		.icon-zoom
+			font-size: rem(25px)
+		.product__zoom
+			padding: rem(16px)
+	.product__cart
+		margin-bottom: rem(70px)
+		padding-bottom: rem(70px)
+		border-bottom: 1px solid $ligth-gray
+
+		.video-icon
+			zoom: .5
+			right: rem(-60px)
+			top: rem(-60px)
+			&:hover
+				transform: rotate(360deg)
+		&:hover
+			.product__overlay-box
+				opacity: 1
+				transform: perspective(800px) rotateY(0deg)
+	.product__title
+		font-family: $title
+		font-size: rem(20px)
+		margin-bottom: rem(30px)
+		font-weight: bold
+	.product__cart-inner
+		display: grid
+		grid-template: repeat(2,auto)/repeat(3,1fr)
+		grid-gap: 30px
+		+media(992px)
+			grid-template: repeat(2,auto)/repeat(2,1fr)
+		+media(768px)
+			grid-template: repeat(3,auto)/repeat(2,1fr)
+		+media(480px)
+			display: block
+	.product__img
+		grid-column: 1/2
+		grid-row: 1/3
+		+media(1200px)
+			grid-column: 1/2
+			grid-row: 1/2
+	.img__wrapper
+		position: relative
+		>img
+			width: 100%
+	.product__overlay-box
+		position: absolute
+		@extend %position-cover
+		background-color: rgba(#000, .7)
+		display: flex
+		justify-content: center
+		align-items: center
+		opacity: 0
+		transform: perspective(800px) rotateY(-90deg)
+		transform-origin: right
+		transition: all 0.5s
+	.product__param
+		grid-column: 2/3
+		grid-row: 1/2
+		+media(992px)
+			grid-column: 1/2
+			grid-row: 2/3
+		+media(768px)
+			grid-column: 1/3
+			grid-row: 2/3
+		tr
+			border-bottom: 1px solid $ligth-gray
+		td
+			padding-top: rem(14px)
+			padding-bottom: rem(14px)
+			padding-right: rem(30px)
+			&:first-child
+				font-weight: bold
+				font-family: $title
+	.product__action
+		grid-column: 3/4
+		grid-row: 1/2
+		text-align: right
+		+media(992px)
+			grid-column: 2/3
+			grid-row: 1/2
+		.btn
+			width: rem(220px)
+			margin-bottom: rem(20px)
+			margin-left: auto
+	.product__price
+		position: relative
+		font-size: rem(20px)
+		font-family: $title
+		color: $accent
+		font-weight: bold
+		margin-bottom: rem(68px)
+	.product__intro
+		grid-column: 2/4
+		grid-row: 2/3
+		+media(1200px)
+			grid-column: 1/4
+			grid-row: 2/3
+		+media(992px)
+			grid-column: 2/3
+			grid-row: 2/3
+		+media(768px)
+			grid-column: 1/3
+			grid-row: 3/4
+		p
+			color: $text-ligth

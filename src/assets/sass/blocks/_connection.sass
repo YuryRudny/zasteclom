@@ -1,0 +1,82 @@
+.connection
+.connection__photo
+	display: flex
+	align-items: flex-end
+	height: 100%
+	+media(992px)
+		img
+			margin: 0 auto
+			margin-bottom: rem(50px)
+.connection__contacts
+	display: flex
+	margin-bottom: rem(40px)
+	+media(992px)
+		justify-content: center
+	+media(585px)
+		flex-direction: column
+	&--left
+		margin-right: rem(37px)
+		+media(585px)
+			display: flex
+			justify-content: space-between
+			align-items: center
+.connection__phone
+	font-family: $font
+	font-weight: bold
+	font-size: rem(24px)
+	color: $accent
+.connection__messeger-list
+	text-align: right
+	li
+		display: inline-block
+		margin-left: rem(20px)
+	.icon
+		font-size: rem(22px)
+		&-viber
+			color: $viber
+		&-telegram
+			color: $telegram
+		&-whatsapp
+			color: $whatsapp
+.connection__contacts--right
+	p
+		font-size: rem(20px)
+		font-weight: 300
+		line-height: 1.2
+		a
+			font-size: rem(20px)
+			font-weight: 300
+			display: block
+			line-height: 1.2
+.connection__quote
+	+media(992px)
+		justify-content: center
+		display: flex
+		text-align: center
+.connection__quote-inner
+	font-size: rem(20px)
+	font-weight: 300
+	padding-top: rem(33px)
+	position: relative
+	.icon
+		position: absolute
+		left: 0
+		top: 0
+		fill: $icon-fill
+		display: block
+	span
+		display: block
+		margin-top: rem(10px)
+		font-size: rem(20px)
+		color: $accent
+.connection__buttons
+	display: flex
+	flex-wrap: wrap
+	margin-top: rem(60px)
+	+media(992px)
+		justify-content: center
+	.btn
+		margin-right: rem(26px)
+		margin-bottom: rem(15px)
+
+

@@ -1,0 +1,49 @@
+.accordion
+.accordion__item
+	margin-bottom: rem(11px)
+	&:first-child
+		.accordion__text
+			display: block
+	&:last-child
+		margin-bottom: 0
+	&.active
+		i
+			&::before
+				transform: rotate(180deg)
+			&::after
+				transform: rotate(360deg)
+.accordion__title
+	border: 2px solid $color-border
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: rem(14px)
+	cursor: pointer
+	
+	p
+		margin-bottom: 0
+		line-height: 1.2
+		vertical-align: middle
+	i
+		width: rem(14px)
+		height: rem(14px)
+		position: relative
+		&::before, &::after
+			content: ''
+			position: absolute
+			width: rem(14px)
+			height: rem(2px)
+			background-color: $text-ligth
+			left: 0
+			top: 50%
+			margin-top: rem(-1px)
+			transition: $transition
+			transform: rotate(0)
+		&::after
+			transform: rotate(90deg)
+.accordion__text
+	padding: rem(14px)
+	background-color: $accent-bg
+	display: none
+	p
+		font-weight: 300

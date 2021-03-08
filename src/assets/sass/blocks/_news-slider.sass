@@ -1,0 +1,46 @@
+.news-slider
+	img
+		width: 100%
+		position: relative
+	.slider-arrows
+		margin-top: rem(5px)
+.news__cart
+	&:hover
+		.news__text
+			box-shadow: $shadow
+.news__text
+	position: relative
+	z-index: 3
+	margin-left: rem(15px)
+	margin-right: rem(15px)
+	background-color: #fff
+	margin-top: rem(-25px)
+	margin-bottom: rem(25px)
+	padding: rem(30px) rem(15px)
+	transition: $transition
+.news__title
+	font-family: $title
+	font-size: rem(20px)
+	font-weight: bold
+	margin-bottom: rem(24px)
+.news__intro
+	margin-bottom: rem(24px)
+.news__intro, .news__intro p
+	font-size: rem(18px)
+	font-weight: 300
+	color: $text-ligth
+.news__date
+	font-size: rem(16px)
+	font-weight: 300
+	color: $text-ligth
+	position: relative
+	padding-left: rem(22px)
+	&::before
+		content: ''
+		position: absolute
+		left: 0
+		top: 50%
+		width: rem(18px)
+		height: rem(2px)
+		background: $text-ligth
+

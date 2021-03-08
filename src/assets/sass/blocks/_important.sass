@@ -1,0 +1,28 @@
+.important
+	.content
+.important__content
+	display: flex
+	align-items: flex-start
+	+media(992px)
+		display: block
+	.border-images
+		flex-shrink: 0
+		margin-right: rem(30px)
+		+media(992px)
+			float: left
+			margin-bottom: rem(30px)
+		+media(600px)
+			float: none
+			margin-bottom: rem(30px)
+.important-strong
+	font-family: $title
+	font-size: rem(20px)
+	font-weight: bold
+	padding-bottom: rem(41px)
+	margin-bottom: rem(35px)
+	border-bottom: 3px solid $color-border
+	+media(992px)
+		border-bottom: none
+		margin-bottom: 1rem
+		padding-bottom: 0
+

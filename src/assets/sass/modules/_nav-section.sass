@@ -1,0 +1,30 @@
+.nav-section
+	.decore-title__group
+		margin-bottom: rem(70px)
+	.content
+		h3
+			margin-bottom: rem(28px)
+.services__nav
+	display: flex
+	flex-wrap: wrap
+	box-shadow: $shadow
+	margin-bottom: rem(50px)
+	li
+		flex-grow: 1
+		text-align: center
+		&.active
+			a, span
+				background-color: $accent
+				color: #fff
+	a, span
+		display: block
+		padding: rem(38px) rem(15px)
+		color: $text-ligth
+		font-family: $title
+		font-size: rem(20px)
+		transition: all .1s ease
+		background-color: #fff
+		&:hover
+			background-color: $accent
+			color: #fff
+

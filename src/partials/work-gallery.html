@@ -1,0 +1,71 @@
+<section class="work-gallery section-spacer">
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-12 title-center">
+				<p class="decore-title last-word">
+					Галерея наших работ
+				</p>
+			</div>
+		</div>
+
+
+		<div class="sortable-masonry">
+			<ul class="work-gallery__filter filter-btns">
+				<li class="btn filter_button active" data-filter=".all">Посмотреть все</li>
+				<li class="btn filter_button" data-filter=".house">Загородные дома</li>
+				<li class="btn filter_button" data-filter=".cottage">Здания</li>
+				<li class="btn filter_button" data-filter=".partition">Перегородки</li>
+				<li class="btn filter_button" data-filter=".balconies">Балконы и лоджии</li>
+				<li class="btn filter_button" data-filter=".other">Прочее</li>
+			</ul>
+			<div class="work-gallery__list items-container clearfix">
+
+				<div class="filter_item work-gallery__item all  balconies">
+					{{> zoom-hover}}
+				</div>
+
+				<div class="filter_item work-gallery__item all partition ">
+					{{> zoom-hover}}
+				</div>
+
+				<div class="filter_item work-gallery__item all  house other">
+					{{> zoom-hover}}
+				</div>
+
+				<div class="filter_item work-gallery__item all  house cottage">
+					{{> zoom-hover}}
+				</div>
+
+				<div class="filter_item work-gallery__item all  partition house cottage other balconies">
+					{{> zoom-hover}}
+				</div>
+
+				<div class="filter_item work-gallery__item all balconies">
+					{{> zoom-hover}}
+				</div>
+
+				<div class="filter_item work-gallery__item all  partition house cottage other">
+					{{> zoom-hover}}
+				</div>
+
+				<div class="filter_item work-gallery__item all  partition other balconies">
+					{{> zoom-hover}}
+				</div>
+
+				<div class="filter_item work-gallery__item all  partition house cottage">
+					{{> zoom-hover}}
+				</div>
+
+			</div>
+		</div>
+
+		<div class="work-gallery__btn-more">
+			<a class="btn btn--gray" href="#">
+				Смотреть все проекты
+			</a>
+		</div>
+	</div>
+	</div>
+</section>

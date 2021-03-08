@@ -1,0 +1,139 @@
+.main-slider
+	position: relative
+	.swiper-container
+		.swiper-button-prev
+			left: rem(80px)
+			+media(1440px)
+				display: none
+		.swiper-button-next
+			right: rem(80px)
+			+media(1440px)
+				display: none
+	.swiper-slide
+		background-repeat: no-repeat
+		background-size: cover
+		&::before
+			content: ''
+			@extend %position-cover
+			background-color: rgba(#000, .3)
+			z-index: 0
+	.quiz__block
+		position: absolute
+		right: 0
+		left: 50%
+		bottom: 0%
+		@extend %gr
+		z-index: 9
+		padding: rem(30px) rem(55px) rem(30px)
+		transform: translateY(50%)
+		text-align: left
+		+media(930px)
+			position: relative
+			left: 0
+			right: 0
+			transform: translateY(0)
+			padding: rem(30px) rem(15px)
+		.quiz__title
+			text-align: left
+			p
+				font-family: $title
+				font-size: rem(24px)
+				color: #fff
+				font-weight: bold
+				margin-bottom: rem(13px)
+				line-height: 1
+		.quiz__subtitle
+			p
+				color: #fff
+				font-weight: 300
+				margin-bottom: rem(25px)
+		.btn
+			padding-left: rem(80px)
+			padding-right: rem(80px)
+	.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets
+		width: 80%
+		right: 20%
+		+media(930px)
+			width: 100%
+			right: 0
+	.swiper-pagination-bullet
+		width: rem(12px)
+		height: rem(12px)
+		opacity: 1
+		background-color: transparent
+		border: 1px solid #fff
+		cursor: pointer
+		overflow: hidden
+		position: relative
+		&::before
+			content: ''
+			background-color: #fff
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			top: 50%
+			transition: all .3s ease
+		&:hover
+			&::before
+				top: 0
+	.swiper-pagination-bullet-active
+		&::before
+			top: 0
+.main-slider__compositioin
+	padding-top: rem(70px)
+	padding-bottom: rem(70px)
+	display: flex
+	justify-content: center
+	align-items: flex-start
+	flex-direction: column
+	color: #fff
+	.btn
+		margin-top: rem(60px)
+.big-title
+	position: relative
+	z-index: 2
+	margin-bottom: 0
+	span
+		display: block
+		font-family: $title
+		font-size: rem(70px)
+		font-weight: bold
+		position: relative
+		z-index: 6
+		padding-left: rem(28px)
+		padding-top: rem(49px)
+		line-height: 1
+		margin-bottom: 45px
+		+media(992px)
+			font-size: rem(60px)
+		+media(768px)
+			font-size: rem(50px)
+		+media(585px)
+			font-size: rem(30px)
+	&::after
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		width: rem(130px)
+		height: rem(130px)
+		@extend %gr
+		z-index: 0
+.second-title
+	p
+		font-family: $title
+		font-size: rem(30px)
+		font-weight: bold
+		+media(992px)
+			font-size: rem(28px)
+		+media(768px)
+			font-size: rem(20px)
+		+media(585px)
+			font-size: rem(18px)
+.three-title
+	p
+		font-size: rem(18px)
+		font-family: $title
+		+media(768px)
+			font-size: rem(16px)

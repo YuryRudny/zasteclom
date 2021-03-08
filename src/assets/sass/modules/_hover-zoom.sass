@@ -1,0 +1,70 @@
+.hover-zoom
+	position: relative
+	z-index: 2
+	.hover-zoom__overlay
+		position: relative
+		&::before
+			content: ''			
+			position: absolute
+			left: 0
+			top: 0
+			right: 0
+			bottom: 0
+			background-color: rgba(#000006, .3)
+			transition: all .7s ease
+			opacity: 0
+			visibility: hidden
+			transform: rotateX(-180deg)
+			z-index: 2
+		&:hover
+			.hover-zoom__link
+				opacity: 1
+				transform: translateY(-50%)
+			&::before
+				opacity: 1
+				transform: rotateX(0deg)
+				opacity: 1
+				visibility: visible
+			.hover-zoom__title
+				opacity: 1
+				transform: translateY(0px)
+	.hover-zoom__title
+		position: absolute
+		z-index: 5
+		left: rem(10px)
+		right: rem(10px)
+		text-align: center
+		bottom: rem(22px)
+		text-align: center
+		font-family: $title
+		color: #ffffff
+		font-size: rem(18px)
+		opacity: 0
+		transition: $transition
+		transform: translateY(-10px)
+	.hover-zoom__link
+		position: absolute
+		left: 0
+		top: 50%
+		right: 0
+		transform: translateY(-90%)
+		opacity: 0
+		display: flex
+		align-items: center
+		justify-content: center
+		transition: $transition
+		z-index: 3
+		li
+			padding-left: rem(5px)
+			padding-right: rem(5px)
+.hover-zoom__icon
+	@extend %gr
+	width: rem(43px)
+	height: rem(43px)
+	border-radius: 50%
+	text-align: center
+	line-height: rem(43px)
+.icon
+	font-size: rem(18px)
+	color: #fff
+

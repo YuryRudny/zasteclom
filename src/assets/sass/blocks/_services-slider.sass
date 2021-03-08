@@ -1,0 +1,85 @@
+.services-slider
+	position: relative
+	.decore-title
+		position: absolute
+		left: 50%
+		top: rem(40px)
+		transform: translateX(-50%)
+	.swiper-slide
+		max-width: rem(450px)
+	.swiper-slide-active
+		.services-slider__cart
+			background-color: #fff
+.services-slider__cart
+	background-color: #f0f6fc
+	padding: rem(157px) rem(80px) rem(90px) rem(80px)
+	text-align: right
+	display: flex
+	flex-direction: column
+	align-items: flex-end
+	transition: background-color 1.2s ease
+	+media(585px)
+		padding: rem(150px) rem(30px) rem(50px) rem(30px);
+.services-slider__img
+	padding-bottom: rem(30px)
+	padding-right: rem(30px)
+	margin-bottom: rem(80px)
+	width: rem(260px);
+	height: rem(189px);
+	img
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	&::before
+		content: ''
+		position: absolute
+		top: rem(30px)
+		left: rem(30px)
+		right: 0
+		bottom: 0
+		border: rem(2px) solid transparent
+		border-image: $accent-gr
+		border-image-slice: 1
+		z-index: -1
+
+.services-slider__icon
+	width: rem(62px)
+	padding-bottom: rem(70px)
+	position: relative
+	z-index: 2
+	margin-bottom: rem(15px)
+	img
+		width: 100%;
+	&::before
+		content: ''
+		position: absolute
+		left: 50%
+		bottom: 0
+		margin-left: rem(-1px)
+		width: rem(2px)
+		height: rem(54px)
+		background: $accent-gr
+		z-index: 2
+.services-slider__icon-copy
+	position: absolute
+	left: 28%
+	bottom: 32%
+	width: rem(123px)
+	img
+		width: 100%
+		pointer-events: none
+		filter: grayscale(30%)
+		opacity: 0.3
+.services-slider__title
+	font-size: rem(18px)
+	font-family: $title
+	font-weight: bold
+	text-transform: uppercase
+	color: $color-title
+	margin-bottom: rem(24px)
+.services-slider__text
+	font-size: rem(18px)
+	font-family: $font
+	font-weight: 300
+	line-height: 1.6
+	color: $text-ligth

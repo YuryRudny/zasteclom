@@ -1,0 +1,38 @@
+.filter_list
+	display: flex
+	flex-wrap: wrap
+	margin-bottom: rem(70px)
+	.default_input
+		display: none
+		&:checked + .custom_input
+			@extend %gr
+			box-shadow: none
+			color: #fff
+		&:disabled + .custom_input
+			opacity: 0.5
+			&:active
+				transform: translateY(0px)
+			&:hover
+				background-color: transparent
+				box-shadow: inset 0px 0 0px 2px $color-border!important
+				background-image: none
+				box-shadow: none
+				color: $text
+	.filter_item
+		margin-right: rem(17px)
+		margin-bottom: rem(17px)
+		label
+			margin-bottom: 0
+	.custom_input
+		display: inline-block
+		padding: rem(14px) 24px
+		white-space: nowrap
+		box-shadow: inset 0px 0 0px 2px $color-border
+		font-size: rem(18px)
+		font-weight: 300
+		color: $text-ligth
+		&:hover
+			@extend %gr
+			box-shadow: none
+			color: #fff
+

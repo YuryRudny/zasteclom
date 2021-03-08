@@ -1,0 +1,200 @@
+.s-quiz
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	position: relative
+	color: #fff
+	padding-top: rem(70px)
+	padding-bottom: rem(70px)
+	::placeholder
+		font-size: rem(16px)
+		font-weight: 300
+	label
+		margin-bottom: 0
+	&::before
+		content: ''
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		background-color: rgba(#000, .8)
+		z-index: 1
+	.decore-title
+		span.first
+			&::before
+				opacity: 0.3
+.quiz-form, .title-center
+	position: relative
+	z-index: 5
+.quiz__images-input
+	label
+		&:hover
+			.img-border
+				&::before
+					border-color: $accent
+.default-field:checked+.custom__input
+	.img-border
+			&::before
+				border-color: $accent
+	.custom__checkbox
+		.icon
+			opacity: 1
+			transform: translate(3px, -9px)
+	.custom__radio
+		&::before
+			transform: scale(1)
+.quiz__row
+	display: flex
+	flex-wrap: wrap
+	&.w-20
+		.quiz__checkbox-item
+			width: 25%
+			padding: 0 rem(22px)
+			.custom__input
+				align-items: flex-start
+			.custom__checkbox-title
+				transform: translateY(rem(-6px))
+			+media(1200px)
+				padding: 0 rem(12px)
+			+media(992px)
+				width: 50%
+				padding: 0 rem(20px)
+			+media(480px)
+				width: 100%
+				padding: 0
+	&.w-100
+		justify-content: center
+		.quiz__checkbox-item
+			width: 100%
+.quiz__row-list
+	margin: 0 auto
+	column-count: 2
+	margin-bottom: rem(30px)
+	li
+		width: 80%
+.quiz__row-wrapper
+	display: flex
+	justify-content: center
+	flex-direction: column
+.quiz__step
+	display: none
+	&.active
+		display: block
+	label
+		cursor: pointer
+	fieldset
+		input
+			padding: rem(10px)
+		+media-min(576px)
+			&:last-child
+				margin-bottom: 0
+	textarea
+		height: 100%
+		padding: rem(10px)
+
+	.default-field
+		display: none
+	.img-border
+		position: relative
+		margin-bottom: rem(20px)
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+		&::before
+			content: ''
+			position: absolute
+			left: rem(-13px)
+			top: 0px
+			right: rem(-13px)
+			bottom: 0
+			border: 9px solid #fff
+			transform: skewY(-5deg)
+			border-image-slice: 1
+			transition: $transition
+	.input__title
+		font-size: rem(20px)
+		font-weight: 300
+		text-align: center
+.quiz__title
+	font-size: rem(24px)
+	font-weight: bold
+	text-align: center
+	margin-bottom: rem(40px)
+	margin-top: rem(20px)
+.quiz__action
+	display: flex
+	justify-content: center
+	.btn
+		padding-left: rem(60px)
+		padding-right: rem(60px)
+		margin-right: rem(30px)
+		&:last-child
+			margin-right: 0
+.quiz__checkbox-item
+	margin-bottom: rem(30px)
+	.custom__input
+		display: flex
+		align-items: center
+	.custom__checkbox
+		flex-shrink: 0
+		width: rem(43px)
+		height: rem(43px)
+		border: rem(2px) solid #fff
+		margin-right: rem(50px)
+		.icon
+			font-size: rem(45px)
+			transform: translate(3px, -9px) 
+			fill: $icon-fill
+			opacity: 0
+			transition: $transition
+	.custom__checkbox-title
+		font-size: rem(20px)
+		font-weight: bold
+.quiz_titles
+	font-size: rem(20px)
+	font-weight: bold
+.quiz__radio-list
+	column-count: 2
+	margin: rem(24px) 0
+	li
+		display: flex
+		align-items: center
+		margin-bottom: rem(14px)
+	.custom__input
+		display: flex
+		align-items: center
+	.custom__radio
+		flex-shrink: 0
+		width: rem(20px)
+		height: rem(20px)
+		border: rem(3px) solid #fff
+		border-radius: 50%
+		margin-right: rem(17px)
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			left: -3px
+			right: -3px
+			top: -3px
+			bottom: -3px
+			@extend %gr
+			transform: scale(0)
+			transition: $transition
+			border-radius: 50%
+			border: 3px solid #fff
+.user-variant
+	width: 100%	
+	margin-bottom: rem(30px)!important
+	span
+		display: block
+		font-size: rem(20px)
+		font-weight: 300
+		margin-bottom: rem(10px)
+	input
+		width: 100%
+		padding: rem(3px) rem(10px)
+
+

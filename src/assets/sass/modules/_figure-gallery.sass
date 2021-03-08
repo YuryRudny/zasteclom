@@ -1,0 +1,23 @@
+.figure-gallery
+	figure
+		position: relative
+		&:hover
+			figcaption
+				height: 100%
+		img
+			width: 100%
+	figcaption
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		height: rem(74px)
+		display: flex
+		align-items: center
+		justify-content: center
+		color: #fff
+		font-size: rem(18px)
+		font-weight: 300
+		font-family: $font
+		background-color: rgba(#000, .6)
+		transition: $transition

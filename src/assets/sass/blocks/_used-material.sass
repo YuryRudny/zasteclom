@@ -1,0 +1,86 @@
+.used-material
+	.subtitle
+		text-align: center
+		margin-bottom: rem(40px)
+	.swiper-slide
+	.img-scale__wrapper
+		margin-bottom: rem(36px)
+.used-material--sliders
+	.used-material__cart
+		padding: 15px 15px
+		display: flex
+	.swiper-slide
+		display: flex
+	.icon-decore
+		font-size: rem(58px)
+		color: #a2a2a2
+.used-material__cart
+	position: relative
+	&--inner
+		.btn
+			flex-grow: 1
+	&:hover
+		.img-scale__wrapper
+			img
+				transform: scale(1.05)
+		.used-material__title
+			color: $accent
+		.icon
+			fill: $icon-fill
+		.used-material__link
+			color: $accent
+	figure
+		background-color: #fff
+		box-shadow: $shadow
+	figcaption
+		padding: 0 rem(32px) rem(33px) rem(46px)
+
+.used-material__img
+	width: 100%
+	height: rem(242px)
+	object-fit: cover
+.used-material__title
+	transition: $transition
+	p
+		display: inline-block
+		position: relative
+		z-index: 2
+		font-family: $title
+		font-size: rem(22px)
+		font-weight: bold
+		padding: rem(13px) 0
+		margin-bottom: rem(11px)
+		&::before
+			content: ''
+			position: absolute
+			left: 6%
+			top: 0
+			width: rem(43px)
+			height: rem(57px)
+			background-image: url(../img/icons/title-decore--small.png)
+			background-position: center
+			background-size: contain
+			background-repeat: no-repeat
+			z-index: -1
+.used-material__text
+	margin-bottom: rem(37px)
+	p
+		font-size: rem(18px)
+		font-weight: 300
+		font-family: $font
+		color: $text-ligth
+		line-height: 1.5
+.used-material__bottom
+	display: flex
+	justify-content: space-between
+	align-items: flex-end
+	position: relative
+	z-index: 
+.used-material__link
+	font-family: $font
+	color: $color-title
+	font-weight: bold
+	font-size: rem(18px)
+.used-material__icon
+	filter: grayscale(100%)
+	transition: $transition

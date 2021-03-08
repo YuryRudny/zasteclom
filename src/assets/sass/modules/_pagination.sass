@@ -1,0 +1,33 @@
+.pagination-nav
+	display: flex
+	justify-content: center
+	ul
+		display: flex
+		margin: 0
+		padding: rem(12px) rem(30px)
+		border-radius: rem(50px)
+		border: 1px solid $border-color
+	li
+		margin: 0 rem(4px)
+		transition: background .3s ease
+		border-radius: 50px
+		&:active
+			transform: translateY(1px)
+		a
+			padding: rem(8px)
+			height: rem(32px)
+			min-width: rem(32px)
+			display: flex
+			align-items: center
+			justify-content: center
+
+		&:hover, &.active
+			background: $accent-gr
+			a
+				color: #fff
+		a
+			color: $color-title
+			font-family: $font
+			text-decoration: none
+			font-size: rem(18px)
+			font-weight: 500

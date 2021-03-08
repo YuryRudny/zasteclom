@@ -1,0 +1,66 @@
+.mobile__menu
+	position: fixed
+	left: 0
+	top: 0
+	width: 300px
+	height: 100vh
+	background-color: #fff
+	z-index: 999
+	left: -150%
+	transition: all .3s ease
+	.btn-close
+		position: absolute
+		right: 0
+		top: 0
+		width: rem(56px)
+		height: rem(56px)
+		.icon
+			color: $border-color
+	&.active
+		left: 0
+.menu__wrapper
+	padding: rem(60px) 0 rem(0px)
+	overflow: auto
+	height: 100%
+	li
+		a, span
+			display: block
+			padding: rem(15px) rem(56px) rem(15px) rem(30px)
+			&:hover
+				background-color: $ligth-gray
+.dropdown
+	position: relative
+	&.menu_open
+		i
+			&::before
+				transform: rotate(180deg)
+			&::after
+				transform: rotate(360deg)
+	i
+		width: rem(56px)
+		height: rem(56px)
+		display: inline-block
+		position: absolute
+		right: 0
+		top: 0
+		cursor: pointer	
+		&::before, &::after
+			content: ''
+			position: absolute
+			left: 50%
+			top: 50%
+			width: 16px
+			height: 2px
+			margin-top: -1px
+			margin-left: -8px
+			background-color: $border-color
+			transition: $transition
+		&::after
+			transform: rotate(90deg)
+	ul
+		position: static
+.mobile__hidden-menu
+	display: none
+	li
+		a, span
+			padding-left: 50px

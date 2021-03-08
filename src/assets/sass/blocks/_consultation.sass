@@ -1,0 +1,45 @@
+.consultation
+.consultant__text-block
+	border: 2px solid $color-border;
+	padding: rem(36px) 0 rem(20px) 0;
+	display: flex;
+	height: 100%;
+	position: relative;
+	+media(992px)
+		margin-top: rem(30px);
+	+media(585px)
+		flex-direction: column;
+	&::before
+		content: ''
+		position: absolute;
+		left: 50%;
+		margin-left: rem(-1px);
+		top: rem(40px);
+		bottom: rem(40px);
+		width: rem(2px);
+		background-color: $color-border;
+		+media(585px)
+			display: none;
+.consultant__text
+	padding: rem(0px) rem(25px) 0;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center top;
+	.icon
+		font-size: rem(35px)
+		fill: $icon-fill
+		margin-bottom: rem(20px)
+	&--left
+		+media(585px)
+			margin-bottom: rem(30px);
+	p
+		color: $text-ligth
+		font-weight: 300;
+	a
+		color: $accent
+		font-weight: bold;
+		position: relative;
+		padding-right: rem(19px);
+		background-image: url(../img/icons/list-arrow.png);
+		background-repeat: no-repeat;
+		background-position: right center;

@@ -1,0 +1,35 @@
+.statistic
+	position: relative
+	background-image: url(../img/statistic-bg.jpg)
+	background-repeat: no-repeat
+	background-size: cover
+	&::before
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(#000, .3)
+.statistic__item
+	padding: rem(38px) 0 rem(18px) 0 
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	background-image: url(../img/icons/statistic-decore.png)
+	background-repeat: no-repeat
+	background-position: center
+	background-size: contain
+	+media(992px)
+		margin-bottom: rem(60px);
+.statistic__digit
+	color: #ffffff
+	font-family: $title
+	font-size: rem(60px)
+	font-weight: bold
+	line-height: 1
+.statistic__title
+	font-size: rem(22px)
+	font-weight: bold
+	color: #fff

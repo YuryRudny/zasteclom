@@ -1,0 +1,25 @@
+.sertificate-slider
+	position: relative
+	padding-top: rem(70px)
+	margin-bottom: rem(70px)
+	&::before
+		content: ''		
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: rem(331px)
+		background-color: $accent-bg
+	.decore-title
+		margin-bottom: rem(20px)
+	.swiper-container
+		padding: rem(20px) 0
+	.swiper-slide
+		transform: scale(.8)
+		transition: transform .8s ease
+		box-shadow: $shadow
+		&.swiper-slide-active
+			transform: scale(1)
+.sertivicate-page
+	img
+		width: 100%

@@ -1,0 +1,60 @@
+.principles
+	position: relative
+	.vertical-slider
+		+media(992px)
+			padding-right: rem(50px);
+		+media(585px)
+			padding-right: rem(0px);
+		.slider-arrows
+			margin-top: rem(-55px)
+			+media(992px)
+				right: 0;
+			+media(585px)
+				display: none;
+	.swiper-wrapper
+		height: rem(600px)
+.principles-bg
+	position: absolute
+	left: 50%
+	right: 0
+	top: 0
+	bottom: 0
+	background-repeat: no-repeat
+	background-position: left center
+	background-size: cover
+	+media(992px)
+		display: none
+.principles__cart
+	margin-left: rem(20px)
+	position: relative
+	padding: rem(30px) rem(30px) rem(30px) rem(70px)
+	border: rem(2px) dashed #d9dfd7
+.principles__icon
+	position: absolute
+	left: -22px
+	top: 50%
+	margin-top: rem(-55px)
+	width: rem(55px)
+	height: rem(110px)
+	border: rem(2px) dashed #d9dfd7
+	background-color: #fff
+	border-radius: rem(50px)
+	display: flex
+	align-items: center
+	justify-content: center
+.principles__title
+	p
+		display: inline-block
+		position: relative
+		z-index: 2
+		font-family: $title
+		font-size: rem(22px)
+		font-weight: bold
+		margin-bottom: rem(20px)
+.principles__text
+	p
+		font-size: rem(18px)
+		font-weight: 300
+		font-family: $font
+		color: $text-ligth
+		line-height: 1.5

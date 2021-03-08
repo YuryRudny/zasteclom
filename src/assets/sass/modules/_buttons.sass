@@ -1,0 +1,56 @@
+.btn
+	background-color: $tr
+	padding: rem(16px) rem(33px)
+	margin: 0
+	display: flex
+	align-items: center
+	justify-content: center
+	font-family: $font
+	font-weight: bold
+	font-size: rem(18px)
+	border-radius: rem(32px)
+	line-height: 1
+	cursor: pointer
+	box-sizing: content-box
+	&:active
+		transform: translateY(2px);
+.btn--white
+	color: #ffffff
+	box-shadow: inset 0px 0 0px 2px #fff
+	&:hover
+		color: #fff
+		@extend %gr
+		box-shadow: none
+.btn--gradient
+	overflow: hidden;
+	@extend %gr
+	color: #ffffff
+	&:hover
+		box-shadow: inset 0px 0 0px 2px $text
+		color: $text
+		background-color: transparent;
+		background-image: none;
+.btn--white-hover
+	&:hover
+		box-shadow: inset 0px 0 0px 2px #fff
+		color: #fff
+		background-color: transparent;
+		background-image: none;
+.btn--gray
+	box-shadow: inset 0px 0 0px 2px #7c7b7b
+	color: #7c7b7b
+	&:hover
+		@extend %gr
+		box-shadow: none
+		color: #fff
+.btn--dark
+	box-shadow: inset 0px 0 0px 2px $text
+	color: $text
+	&:hover
+		@extend %gr
+		box-shadow: none
+		color: #fff
+.btn-close
+	background-color: transparent
+	padding: 0
+
