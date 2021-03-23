@@ -1,13 +1,32 @@
 .filter_list
 	display: flex
 	flex-wrap: wrap
-	margin-bottom: rem(70px)
+	margin-bottom: rem(50px)
 	.default_input
 		display: none
 		&:checked + .custom_input
-			@extend %gr
 			box-shadow: none
-			color: #fff
+			color: $text
+			position: relative
+			@extend %gr
+			span
+				position: relative
+				z-index: 2
+			&::after
+				content: ''
+				position: absolute
+				left: rem(2.5px)
+				top: rem(2px)
+				bottom: rem(2px)
+				right: rem(2px)
+				background-color: #fff
+				z-index: 0
+				border-radius: rem(32px)
+			&:hover
+				color: #fff
+				&::after
+					display: none
+
 		&:disabled + .custom_input
 			opacity: 0.5
 			&:active
@@ -23,16 +42,127 @@
 		margin-bottom: rem(17px)
 		label
 			margin-bottom: 0
-	.custom_input
-		display: inline-block
-		padding: rem(14px) 24px
-		white-space: nowrap
-		box-shadow: inset 0px 0 0px 2px $color-border
-		font-size: rem(18px)
-		font-weight: 300
-		color: $text-ligth
+.custom_input
+	display: inline-block
+	padding: rem(14px) 24px
+	box-shadow: inset 0px 0 0px 2px $color-border
+	font-size: rem(18px)
+	font-weight: 300
+	color: $text-ligth
+	&:hover
+		@extend %gr
+		box-shadow: none
+		color: #fff
+.sidebar-single
+	.sidebar-title
+		font-family: $title
+		font-size: rem(24px)
+		margin-bottom: rem(20px)
+.price-range-wrap 
+	.price-range
+		width: 95%
+	.price-range.ui-widget-content .ui-slider-handle
+		width: rem(16px)
+		height: rem(16px)
+		border: 0
+		@extend %gr
+		border-radius: 100%
+		-webkit-border-radius: 100%
+		cursor: pointer
+		outline: none
+		margin: rem(-8px) 0 0 0
+		top: 50%
+		box-shadow: 0 0 3px 0 rgba(0,0,0,0.2)
+		transition: background .2s ease
+		transform: translateX(-3px)
+		&:before
+			display: none
 		&:hover
-			@extend %gr
-			box-shadow: none
-			color: #fff
+			background: $accent
+	.ui-widget.ui-widget-content
+		border: none
+	.ui-widget-header
+		@extend %gr
+.price-sidebar
+	width: 80%
+#mse2_filters .mse2_number_inputs 
+	.col-6
+		&:last-child
+			input
+				text-align: right
+	label
+		width: 100%
+	input
+		border: none
+		outline: none
+		width: 100%
+		&:focus, &:active
+			outline: none
+.catalog__filter-icon
+	display: none
+	position: fixed
+	top: 57%
+	left: 0
+	width: 50px
+	height: 50px
+	z-index: 99
+	border-radius: 0 30px 30px 0
+	background-color: #fff
+	box-shadow: 0 0 0.5rem rgba(0,0,0,.17)
+	align-items: center
+	justify-content: center
+	+media(992px)
+		display: flex
+	button
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 50px
+		height: 50px
+		background: transparent
+		padding: 0
+		&:active
+			transform: translateY(1px)
+	.icon
+		font-size: 25px
+		fill: $icon-fill
+		transform: translateX(-3px)
+.filter__close
+	position: absolute
+	right: 0
+	top: 0
+	background-color: transparent
+	border: none
+	width: rem(66px)
+	height: rem(66px)
+	padding: rem(20px)
+	align-items: flex-start
+	justify-content: flex-end
+	.icon
+		color: $text-ligth
+.catalog-page
+	.filter__close
+		display: none
+	+media(992px)
+		.price-sidebar
+			width: 100%
+		.filter__close
+			display: flex
+		.filter_form
+			position: fixed
+			left: rem(-550px)
+			width: rem(380px)
+			top: 0
+			height: 100vh
+			background: #fff
+			z-index: 9999
+			padding: rem(50px) rem(20px)
+			overflow: auto
+			box-shadow: 6px 0px 10px 0px rgba(0, 0, 0, 0.15)
+			transition: $transition
+			+media(420px)
+				width: 300px
+			&.active
+				left: 0
 
+		

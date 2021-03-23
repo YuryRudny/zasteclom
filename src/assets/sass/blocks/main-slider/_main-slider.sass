@@ -12,6 +12,9 @@
 	.swiper-slide
 		background-repeat: no-repeat
 		background-size: cover
+		height: rem(512px)
+		+media(585px)
+			height: 410px
 		&::before
 			content: ''
 			@extend %position-cover
@@ -27,6 +30,13 @@
 		padding: rem(30px) rem(55px) rem(30px)
 		transform: translateY(50%)
 		text-align: left
+		.btn
+			padding-left: rem(80px)
+			padding-right: rem(80px)
+			display: inline-block
+			text-decoration: none
+			&:hover
+				box-shadow: inset 0px 0 0px 2px #fff
 		+media(930px)
 			position: relative
 			left: 0
@@ -47,9 +57,7 @@
 				color: #fff
 				font-weight: 300
 				margin-bottom: rem(25px)
-		.btn
-			padding-left: rem(80px)
-			padding-right: rem(80px)
+
 	.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets
 		width: 80%
 		right: 20%
@@ -111,6 +119,7 @@
 			font-size: rem(50px)
 		+media(585px)
 			font-size: rem(30px)
+			padding-top: rem(30px)
 	&::after
 		content: ''
 		position: absolute
@@ -120,6 +129,9 @@
 		height: rem(130px)
 		@extend %gr
 		z-index: 0
+		+media(585px)
+			width: rem(80px)
+			height: rem(80px)
 .second-title
 	p
 		font-family: $title

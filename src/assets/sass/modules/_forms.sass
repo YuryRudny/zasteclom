@@ -1,102 +1,102 @@
 fieldset
-	margin: 0;
-	padding: 0;
-	border: none;
-	display: flex;
-	flex-direction: column;
-	margin-bottom: rem(25px);
+	margin: 0
+	padding: 0
+	border: none
+	display: flex
+	flex-direction: column
+	margin-bottom: rem(25px)
 	.error
 		color: red
-		font-size: rem(14px);
+		font-size: rem(14px)
 .input--border
-	font-family: $font;
-	font-size: rem(18px);
+	font-family: $font
+	font-size: rem(18px)
 	color: $text
-	font-weight: 300;
-	border: 2px solid $color-border;
-	padding: rem(13px) rem(20px);
-	line-height: 1.2;
+	font-weight: 300
+	border: 2px solid $color-border
+	padding: rem(13px) rem(20px)
+	line-height: 1.2
 	::placeholder
-		font-family: $text-ligth;
-		font-size: rem(18px);
+		font-family: $text-ligth
+		font-size: rem(18px)
 		color: $accent
-		font-weight: 300;
+		font-weight: 300
 
 textarea
 	resize: none
-	width: 100%;
-	min-height: rem(127px);
+	width: 100%
+	min-height: rem(127px)
 .pages_form
-	border: 2px solid $color-border;
-	padding: rem(39px) rem(30px);
-	display: flex;
-	align-items: center;
+	border: 2px solid $color-border
+	padding: rem(39px) rem(30px)
+	display: flex
+	align-items: center
 	form
-		display: flex;
-		flex-direction: column;
-		width: 100%;
+		display: flex
+		flex-direction: column
+		width: 100%
 
 	fieldset
-		margin: 0;
+		margin: 0
 	&.two-column
 		.fildset-group
-			margin-bottom: rem(30px);
-			display: grid;
-			grid-template: repeat(2,auto)/repeat(2,1fr);
-			grid-gap: rem(30px);
+			margin-bottom: rem(30px)
+			display: grid
+			grid-template: repeat(2,auto)/repeat(2,1fr)
+			grid-gap: rem(30px)
 			+media(585px)
-				grid-template: repeat(3,auto)/repeat(1,1fr);
+				grid-template: repeat(3,auto)/repeat(1,1fr)
 			fieldset
-				margin: 0;
+				margin: 0
 				textarea
-					height: 100%;
+					height: 100%
 				&:nth-child(1)
-					grid-column: 1/2;
-					grid-row: 1/2;
+					grid-column: 1/2
+					grid-row: 1/2
 					+media(585px)
-						grid-column: 1/3;
-						grid-row: 1/2;
+						grid-column: 1/3
+						grid-row: 1/2
 				&:nth-child(2)
-					grid-column: 1/2;
-					grid-row: 2/3;
+					grid-column: 1/2
+					grid-row: 2/3
 					+media(585px)
-						grid-column: 1/3;
-						grid-row: 2/3;
+						grid-column: 1/3
+						grid-row: 2/3
 				&:nth-child(3)
-					grid-column: 2/3;
-					grid-row: 1/3;
+					grid-column: 2/3
+					grid-row: 1/3
 					+media(585px)
-						grid-column: 1/3;
-						grid-row: 3/4;
+						grid-column: 1/3
+						grid-row: 3/4
 	&.one-column
 		.fildset-group
-			margin-bottom: rem(30px);
-			display: grid;
-			grid-template: repeat(2,auto)/repeat(2,1fr);
-			grid-gap: rem(30px);
+			margin-bottom: rem(30px)
+			display: grid
+			grid-template: repeat(2,auto)/repeat(2,1fr)
+			grid-gap: rem(30px)
 			+media(585px)
-				grid-template: repeat(3,auto)/repeat(1,1fr);
+				grid-template: repeat(3,auto)/repeat(1,1fr)
 			fieldset
-				margin: 0;
+				margin: 0
 				textarea
-					height: 100%;
+					height: 100%
 				&:nth-child(1)
-					grid-column: 1/2;
-					grid-row: 1/2;
+					grid-column: 1/2
+					grid-row: 1/2
 					+media(585px)
-						grid-column: 1/3;
-						grid-row: 1/2;
+						grid-column: 1/3
+						grid-row: 1/2
 				&:nth-child(2)
-					grid-column: 2/3;
-					grid-row: 1/2;
+					grid-column: 2/3
+					grid-row: 1/2
 					+media(585px)
-						grid-column: 1/3;
-						grid-row: 2/3;
+						grid-column: 1/3
+						grid-row: 2/3
 				&:nth-child(3)
-					grid-column: 1/3;
-					grid-row: 2/3;
+					grid-column: 1/3
+					grid-row: 2/3
 					+media(585px)
-						grid-column: 1/3;
-						grid-row: 3/4;
+						grid-column: 1/3
+						grid-row: 3/4
 
 

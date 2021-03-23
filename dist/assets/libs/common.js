@@ -119,6 +119,4 @@ $(window).on("scroll load resize", function () {
 		});
 		show = false;
 	}
-
-
 });

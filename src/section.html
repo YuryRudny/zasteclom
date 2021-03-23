@@ -4,14 +4,20 @@ title: Раздел
 ---
 <main class="product__section">
 	{{> pages-top}}
-
+	<div class="catalog__filter-icon">
+		<button id="shop_filter-button" title="Показать фильтры">
+			<svg class="icon icon-filter">
+				<use xlink:href="assets/img/svg/symbol/sprite.svg#filter"></use>
+			</svg>
+		</button>
+	</div>
 
 	<section class="product__showcase section-spacer">
 		<div class="container">
 
-			<div class="product__cart">
+			<div class="product__cart has_popap">
 				<p class="product__title">
-					Золотая плёнка
+					<a href="product.html">Золотая плёнка</a>
 				</p>
 				<div class="product__cart-inner">
 
@@ -19,7 +25,7 @@ title: Раздел
 						<div class="img__wrapper">
 							<img src="/assets/img/products/product-img.jpg" alt="Золотая плёнка">
 							<div class="product__overlay-box">
-								<a href="#1234" class="btn btn--white productVastView">Подробнее</a>
+								<a href="/section.html?789" class="btn btn--white popapOpen">Подробнее</a>
 							</div>
 						</div>
 					</div>
@@ -37,8 +43,11 @@ title: Раздел
 								</div>
 							</div>
 						</div>
-						<button class="btn btn--gradient">Заказать</button>
-						<button class="btn btn--gray">Бесплатный расчёт</button>
+						<div class="product__buttons">
+							<button class="btn btn--gradient">Заказать</button>
+							<button class="btn btn--gray openQuiz" data-title="Зеркальная солнцезащитная пленка ZS 5">Бесплатный
+								расчёт</button>
+						</div>
 					</div>
 					<table class="product__param">
 						<tr>
@@ -73,16 +82,16 @@ title: Раздел
 
 				</div>
 
-				<div class="product-popup">
-					<div class="product-popup__body">
-						<button class="product-popup__close">
+				<div class="product-cart" id="789">
+					<div class="product-cart__body">
+						<button class="product-cart__close">
 							<svg class="icon icon-close">
 								<use xlink:href="assets/img/svg/symbol/sprite.svg#close"></use>
 							</svg>
 						</button>
-						<div class="product-popup__content">
-							<div class="row">
-								<div class="col-lg-6">
+						<div class="product-cart__content">
+							<div class="product-cart__grid">
+								<div class="product-cart__grid-item">
 									<div class="product__gallery">
 										<div class="swiper-container">
 											<div class="swiper-wrapper">
@@ -124,65 +133,70 @@ title: Раздел
 										</div>
 									</div>
 								</div>
-								<div class="col-lg-6">
-									<div class="product__description">
-										<p class="product__title">
-											Атермальная непрозрачная плёнка
-										</p>
-										<p class="product__dop-info">
-											Плёнка + монтаж
-										</p>
-										<div class="product__price-block">
-											<p class="product__price">от 322 руб.- 4390 руб.</p>
-											<div class="tooltip">
-												<svg class="icon icon-info">
-													<use xlink:href="assets/img/svg/symbol/sprite.svg#info"></use>
-												</svg>
-												<div class="tooltip__content">
-													Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, alias.
-												</div>
+								<div class="product-cart__grid-item">
+									<p class="product__title">
+										Атермальная непрозрачная плёнка
+									</p>
+									<p class="product__dop-info">
+										Плёнка + монтаж
+									</p>
+									<div class="product__price-block">
+										<p class="product__price">от 322 руб.- 4390 руб.</p>
+										<div class="tooltip">
+											<svg class="icon icon-info">
+												<use xlink:href="assets/img/svg/symbol/sprite.svg#info"></use>
+											</svg>
+											<div class="tooltip__content">
+												Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, alias.
 											</div>
 										</div>
-										<div class="product__buttons">
-											<button class="btn btn--gradient">Заказать</button>
-											<button class="btn btn--gray">Бесплатный расчёт</button>
-										</div>
-										<ul class="product__advantages">
-											<li>
-												<div class="product__advantages-img-wrapper">
-													<img src="/assets/img/icons/shield.png" alt="">
-												</div>
-												<span>
-													Защита от царапин
-												</span>
-											</li>
-											<li>
-												<div class="product__advantages-img-wrapper">
-													<img src="/assets/img/icons/sun-o.png" alt="">
-												</div>
-												<span>
-													Защита от ультрафиолета 98%
-												</span>
-											</li>
-											<li>
-												<div class="product__advantages-img-wrapper">
-													<img src="/assets/img/icons/diamond.png" alt="">
-												</div>
-												<span>
-													Гарантия на пленку от 3 лет
-												</span>
-											</li>
-											<li>
-												<div class="product__advantages-img-wrapper">
-													<img src="/assets/img/icons/paint-brush.png" alt="">
-												</div>
-												<span>
-													Качественный клеевой слой
-												</span>
-											</li>
-										</ul>
+									</div>
+									<div class="product__buttons">
+										<button class="btn btn--gradient">Заказать</button>
+										<button class="btn btn--gray openQuiz" data-title="Зеркальная солнцезащитная пленка ZS 5">Бесплатный
+											расчёт</button>
 									</div>
 								</div>
+								<div class="product-cart__grid-item">
+
+									<ul class="product__advantages">
+										<li>
+											<div class="product__advantages-img-wrapper">
+												<img src="/assets/img/icons/shield.png" alt="">
+											</div>
+											<span>
+												Защита от царапин
+											</span>
+										</li>
+										<li>
+											<div class="product__advantages-img-wrapper">
+												<img src="/assets/img/icons/sun-o.png" alt="">
+											</div>
+											<span>
+												Защита от ультрафиолета 98%
+											</span>
+										</li>
+										<li>
+											<div class="product__advantages-img-wrapper">
+												<img src="/assets/img/icons/diamond.png" alt="">
+											</div>
+											<span>
+												Гарантия на пленку от 3 лет
+											</span>
+										</li>
+										<li>
+											<div class="product__advantages-img-wrapper">
+												<img src="/assets/img/icons/paint-brush.png" alt="">
+											</div>
+											<span>
+												Качественный клеевой слой
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="row">
 								<div class="col-12">
 									<ul class="company_advantages">
 
@@ -224,6 +238,7 @@ title: Раздел
 
 									</ul>
 								</div>
+
 								<div class="col-12">
 									<div class="product__tabs">
 										<ul class="tabs__header">
@@ -393,9 +408,9 @@ title: Раздел
 
 			</div>
 
-			<div class="product__cart">
+			<div class="product__cart has_popap">
 				<p class="product__title">
-					Золотая плёнка
+					<a href="product.html">Золотая плёнка</a>
 				</p>
 				<div class="product__cart-inner">
 
@@ -403,7 +418,7 @@ title: Раздел
 						<div class="img__wrapper">
 							<img src="/assets/img/products/product-img.jpg" alt="Золотая плёнка">
 							<div class="product__overlay-box">
-								<button class="btn btn--white productVastView">Подробнее</button>
+								<a href="/section.html?789" class="btn btn--white popapOpen">Подробнее</a>
 							</div>
 						</div>
 					</div>
@@ -421,8 +436,11 @@ title: Раздел
 								</div>
 							</div>
 						</div>
-						<button class="btn btn--gradient">Заказать</button>
-						<button class="btn btn--gray">Бесплатный расчёт</button>
+						<div class="product__buttons">
+							<button class="btn btn--gradient">Заказать</button>
+							<button class="btn btn--gray openQuiz" data-title="Зеркальная солнцезащитная пленка ZS 5">Бесплатный
+								расчёт</button>
+						</div>
 					</div>
 					<table class="product__param">
 						<tr>
@@ -457,16 +475,16 @@ title: Раздел
 
 				</div>
 
-				<div class="product-popup">
-					<div class="product-popup__body">
-						<button class="product-popup__close">
+				<div class="product-cart" id="789">
+					<div class="product-cart__body">
+						<button class="product-cart__close">
 							<svg class="icon icon-close">
 								<use xlink:href="assets/img/svg/symbol/sprite.svg#close"></use>
 							</svg>
 						</button>
-						<div class="product-popup__content">
-							<div class="row">
-								<div class="col-lg-6">
+						<div class="product-cart__content">
+							<div class="product-cart__grid">
+								<div class="product-cart__grid-item">
 									<div class="product__gallery">
 										<div class="swiper-container">
 											<div class="swiper-wrapper">
@@ -493,25 +511,6 @@ title: Раздел
 													<img src="/assets/img/products/popup-img-1.jpg" alt="">
 												</div>
 
-												<div class="swiper-slide">
-													<a class="video-icon" href="https://www.youtube.com/watch?v=wza_1tr6CfU" data-fancybox
-														data-caption="nkijni">
-														<svg class="icon icon-video-icon">
-															<use xlink:href="assets/img/svg/symbol/sprite.svg#video-icon"></use>
-														</svg>
-													</a>
-													<ul class="gallery__action">
-														<li>
-															<a href="/assets/img/news/news-1.jpg" data-fancybox="popup-gallery" data-caption="nkijni">
-																<svg class="icon icon-zoom">
-																	<use xlink:href="assets/img/svg/symbol/sprite.svg#zoom"></use>
-																</svg>
-															</a>
-														</li>
-													</ul>
-													<img src="/assets/img/news/news-1.jpg" alt="">
-												</div>
-
 												<div class="swiper-slide video-slide">
 
 													<a href="https://www.youtube.com/watch?v=wza_1tr6CfU" data-fancybox data-caption="nkijni">
@@ -527,65 +526,70 @@ title: Раздел
 										</div>
 									</div>
 								</div>
-								<div class="col-lg-6">
-									<div class="product__description">
-										<p class="product__title">
-											Атермальная непрозрачная плёнка
-										</p>
-										<p class="product__dop-info">
-											Плёнка + монтаж
-										</p>
-										<div class="product__price-block">
-											<p class="product__price">от 322 руб.- 4390 руб.</p>
-											<div class="tooltip">
-												<svg class="icon icon-info">
-													<use xlink:href="assets/img/svg/symbol/sprite.svg#info"></use>
-												</svg>
-												<div class="tooltip__content">
-													Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, alias.
-												</div>
+								<div class="product-cart__grid-item">
+									<p class="product__title">
+										Атермальная непрозрачная плёнка
+									</p>
+									<p class="product__dop-info">
+										Плёнка + монтаж
+									</p>
+									<div class="product__price-block">
+										<p class="product__price">от 322 руб.- 4390 руб.</p>
+										<div class="tooltip">
+											<svg class="icon icon-info">
+												<use xlink:href="assets/img/svg/symbol/sprite.svg#info"></use>
+											</svg>
+											<div class="tooltip__content">
+												Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, alias.
 											</div>
 										</div>
-										<div class="product__buttons">
-											<button class="btn btn--gradient">Заказать</button>
-											<button class="btn btn--gray">Бесплатный расчёт</button>
-										</div>
-										<ul class="product__advantages">
-											<li>
-												<div class="product__advantages-img-wrapper">
-													<img src="/assets/img/icons/shield.png" alt="">
-												</div>
-												<span>
-													Защита от царапин
-												</span>
-											</li>
-											<li>
-												<div class="product__advantages-img-wrapper">
-													<img src="/assets/img/icons/sun-o.png" alt="">
-												</div>
-												<span>
-													Защита от ультрафиолета 98%
-												</span>
-											</li>
-											<li>
-												<div class="product__advantages-img-wrapper">
-													<img src="/assets/img/icons/diamond.png" alt="">
-												</div>
-												<span>
-													Гарантия на пленку от 3 лет
-												</span>
-											</li>
-											<li>
-												<div class="product__advantages-img-wrapper">
-													<img src="/assets/img/icons/paint-brush.png" alt="">
-												</div>
-												<span>
-													Качественный клеевой слой
-												</span>
-											</li>
-										</ul>
+									</div>
+									<div class="product__buttons">
+										<button class="btn btn--gradient">Заказать</button>
+										<button class="btn btn--gray openQuiz" data-title="Зеркальная солнцезащитная пленка ZS 5">Бесплатный
+											расчёт</button>
 									</div>
 								</div>
+								<div class="product-cart__grid-item">
+
+									<ul class="product__advantages">
+										<li>
+											<div class="product__advantages-img-wrapper">
+												<img src="/assets/img/icons/shield.png" alt="">
+											</div>
+											<span>
+												Защита от царапин
+											</span>
+										</li>
+										<li>
+											<div class="product__advantages-img-wrapper">
+												<img src="/assets/img/icons/sun-o.png" alt="">
+											</div>
+											<span>
+												Защита от ультрафиолета 98%
+											</span>
+										</li>
+										<li>
+											<div class="product__advantages-img-wrapper">
+												<img src="/assets/img/icons/diamond.png" alt="">
+											</div>
+											<span>
+												Гарантия на пленку от 3 лет
+											</span>
+										</li>
+										<li>
+											<div class="product__advantages-img-wrapper">
+												<img src="/assets/img/icons/paint-brush.png" alt="">
+											</div>
+											<span>
+												Качественный клеевой слой
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="row">
 								<div class="col-12">
 									<ul class="company_advantages">
 
@@ -627,6 +631,7 @@ title: Раздел
 
 									</ul>
 								</div>
+
 								<div class="col-12">
 									<div class="product__tabs">
 										<ul class="tabs__header">
@@ -650,51 +655,53 @@ title: Раздел
 											</li>
 										</ul>
 										<div class="tabs__content content active">
-											<div class="container">
-												<div class="row">
-													<div class="col-lg-7">
-														<div class="product__table">
-															<div class="product__tr">
-																<div class="product__td">Тип</div>
-																<div class="product__td">Зеркальная</div>
-															</div>
-															<div class="product__tr">
-																<div class="product__td">Толщина</div>
-																<div class="product__td">600 микрон</div>
-															</div>
-															<div class="product__tr">
-																<div class="product__td">Светопропускание</div>
-																<div class="product__td">70%</div>
-															</div>
-															<div class="product__tr">
-																<div class="product__td">Цвет</div>
-																<div class="product__td">Серебристый</div>
-															</div>
-															<div class="product__tr">
-																<div class="product__td">Отражение энергии солнца</div>
-																<div class="product__td">Да</div>
-															</div>
-															<div class="product__tr">
-																<div class="product__td">Отражение инфракрасного излучения</div>
-																<div class="product__td">Да</div>
-															</div>
-															<div class="product__tr">
-																<div class="product__td">Класс защиты</div>
-																<div class="product__td">А2</div>
-															</div>
-															<div class="product__tr">
-																<div class="product__td">Эффект на стекле</div>
-																<div class="product__td">Белое матовое стекло</div>
-															</div>
+											<div class="row">
+												<div class="col-lg-7">
+													<div class="product__table">
+														<div class="product__tr">
+															<div class="product__td">Тип</div>
+															<div class="product__td">Зеркальная</div>
 														</div>
-													</div>
-													<div class="col-lg-5">
-														<div class="cocoen">
-															<img src="/assets/img/work-gallery/big/10.jpg" />
-															<img src="/assets/img/work-gallery/big/11.jpg" />
+														<div class="product__tr">
+															<div class="product__td">Толщина</div>
+															<div class="product__td">600 микрон</div>
+														</div>
+														<div class="product__tr">
+															<div class="product__td">Светопропускание</div>
+															<div class="product__td">70%</div>
+														</div>
+														<div class="product__tr">
+															<div class="product__td">Цвет</div>
+															<div class="product__td">Серебристый</div>
+														</div>
+														<div class="product__tr">
+															<div class="product__td">Отражение энергии солнца</div>
+															<div class="product__td">Да</div>
+														</div>
+														<div class="product__tr">
+															<div class="product__td">Отражение инфракрасного излучения</div>
+															<div class="product__td">Да</div>
+														</div>
+														<div class="product__tr">
+															<div class="product__td">Класс защиты</div>
+															<div class="product__td">А2</div>
+														</div>
+														<div class="product__tr">
+															<div class="product__td">Эффект на стекле</div>
+															<div class="product__td">Белое матовое стекло</div>
 														</div>
 													</div>
 												</div>
+
+												<div class="col-lg-5">
+
+													<div class="cocoen">
+														<img src="/assets/img/work-gallery/big/10.jpg" />
+														<img src="/assets/img/work-gallery/big/11.jpg" />
+													</div>
+
+												</div>
+
 											</div>
 
 										</div>
@@ -794,9 +801,9 @@ title: Раздел
 
 			</div>
 
-			<div class="product__cart">
+			<div class="product__cart has_popap">
 				<p class="product__title">
-					Золотая плёнка
+					<a href="product.html">Золотая плёнка</a>
 				</p>
 				<div class="product__cart-inner">
 
@@ -804,7 +811,7 @@ title: Раздел
 						<div class="img__wrapper">
 							<img src="/assets/img/products/product-img.jpg" alt="Золотая плёнка">
 							<div class="product__overlay-box">
-								<button class="btn btn--white productVastView">Подробнее</button>
+								<a href="/section.html?789" class="btn btn--white popapOpen">Подробнее</a>
 							</div>
 						</div>
 					</div>
@@ -822,8 +829,11 @@ title: Раздел
 								</div>
 							</div>
 						</div>
-						<button class="btn btn--gradient">Заказать</button>
-						<button class="btn btn--gray">Бесплатный расчёт</button>
+						<div class="product__buttons">
+							<button class="btn btn--gradient">Заказать</button>
+							<button class="btn btn--gray openQuiz" data-title="Зеркальная солнцезащитная пленка ZS 5">Бесплатный
+								расчёт</button>
+						</div>
 					</div>
 					<table class="product__param">
 						<tr>
@@ -858,16 +868,16 @@ title: Раздел
 
 				</div>
 
-				<div class="product-popup">
-					<div class="product-popup__body">
-						<button class="product-popup__close">
+				<div class="product-cart" id="789">
+					<div class="product-cart__body">
+						<button class="product-cart__close">
 							<svg class="icon icon-close">
 								<use xlink:href="assets/img/svg/symbol/sprite.svg#close"></use>
 							</svg>
 						</button>
-						<div class="product-popup__content">
-							<div class="row">
-								<div class="col-lg-6">
+						<div class="product-cart__content">
+							<div class="product-cart__grid">
+								<div class="product-cart__grid-item">
 									<div class="product__gallery">
 										<div class="swiper-container">
 											<div class="swiper-wrapper">
@@ -909,65 +919,70 @@ title: Раздел
 										</div>
 									</div>
 								</div>
-								<div class="col-lg-6">
-									<div class="product__description">
-										<p class="product__title">
-											Атермальная непрозрачная плёнка
-										</p>
-										<p class="product__dop-info">
-											Плёнка + монтаж
-										</p>
-										<div class="product__price-block">
-											<p class="product__price">от 322 руб.- 4390 руб.</p>
-											<div class="tooltip">
-												<svg class="icon icon-info">
-													<use xlink:href="assets/img/svg/symbol/sprite.svg#info"></use>
-												</svg>
-												<div class="tooltip__content">
-													Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, alias.
-												</div>
+								<div class="product-cart__grid-item">
+									<p class="product__title">
+										Атермальная непрозрачная плёнка
+									</p>
+									<p class="product__dop-info">
+										Плёнка + монтаж
+									</p>
+									<div class="product__price-block">
+										<p class="product__price">от 322 руб.- 4390 руб.</p>
+										<div class="tooltip">
+											<svg class="icon icon-info">
+												<use xlink:href="assets/img/svg/symbol/sprite.svg#info"></use>
+											</svg>
+											<div class="tooltip__content">
+												Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, alias.
 											</div>
 										</div>
-										<div class="product__buttons">
-											<button class="btn btn--gradient">Заказать</button>
-											<button class="btn btn--gray">Бесплатный расчёт</button>
-										</div>
-										<ul class="product__advantages">
-											<li>
-												<div class="product__advantages-img-wrapper">
-													<img src="/assets/img/icons/shield.png" alt="">
-												</div>
-												<span>
-													Защита от царапин
-												</span>
-											</li>
-											<li>
-												<div class="product__advantages-img-wrapper">
-													<img src="/assets/img/icons/sun-o.png" alt="">
-												</div>
-												<span>
-													Защита от ультрафиолета 98%
-												</span>
-											</li>
-											<li>
-												<div class="product__advantages-img-wrapper">
-													<img src="/assets/img/icons/diamond.png" alt="">
-												</div>
-												<span>
-													Гарантия на пленку от 3 лет
-												</span>
-											</li>
-											<li>
-												<div class="product__advantages-img-wrapper">
-													<img src="/assets/img/icons/paint-brush.png" alt="">
-												</div>
-												<span>
-													Качественный клеевой слой
-												</span>
-											</li>
-										</ul>
+									</div>
+									<div class="product__buttons">
+										<button class="btn btn--gradient">Заказать</button>
+										<button class="btn btn--gray openQuiz" data-title="Зеркальная солнцезащитная пленка ZS 5">Бесплатный
+											расчёт</button>
 									</div>
 								</div>
+								<div class="product-cart__grid-item">
+
+									<ul class="product__advantages">
+										<li>
+											<div class="product__advantages-img-wrapper">
+												<img src="/assets/img/icons/shield.png" alt="">
+											</div>
+											<span>
+												Защита от царапин
+											</span>
+										</li>
+										<li>
+											<div class="product__advantages-img-wrapper">
+												<img src="/assets/img/icons/sun-o.png" alt="">
+											</div>
+											<span>
+												Защита от ультрафиолета 98%
+											</span>
+										</li>
+										<li>
+											<div class="product__advantages-img-wrapper">
+												<img src="/assets/img/icons/diamond.png" alt="">
+											</div>
+											<span>
+												Гарантия на пленку от 3 лет
+											</span>
+										</li>
+										<li>
+											<div class="product__advantages-img-wrapper">
+												<img src="/assets/img/icons/paint-brush.png" alt="">
+											</div>
+											<span>
+												Качественный клеевой слой
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="row">
 								<div class="col-12">
 									<ul class="company_advantages">
 
@@ -1009,6 +1024,7 @@ title: Раздел
 
 									</ul>
 								</div>
+
 								<div class="col-12">
 									<div class="product__tabs">
 										<ul class="tabs__header">
@@ -1032,40 +1048,55 @@ title: Раздел
 											</li>
 										</ul>
 										<div class="tabs__content content active">
-											<div class="product__table">
-												<div class="product__tr">
-													<div class="product__td">Тип</div>
-													<div class="product__td">Зеркальная</div>
+											<div class="row">
+												<div class="col-lg-7">
+													<div class="product__table">
+														<div class="product__tr">
+															<div class="product__td">Тип</div>
+															<div class="product__td">Зеркальная</div>
+														</div>
+														<div class="product__tr">
+															<div class="product__td">Толщина</div>
+															<div class="product__td">600 микрон</div>
+														</div>
+														<div class="product__tr">
+															<div class="product__td">Светопропускание</div>
+															<div class="product__td">70%</div>
+														</div>
+														<div class="product__tr">
+															<div class="product__td">Цвет</div>
+															<div class="product__td">Серебристый</div>
+														</div>
+														<div class="product__tr">
+															<div class="product__td">Отражение энергии солнца</div>
+															<div class="product__td">Да</div>
+														</div>
+														<div class="product__tr">
+															<div class="product__td">Отражение инфракрасного излучения</div>
+															<div class="product__td">Да</div>
+														</div>
+														<div class="product__tr">
+															<div class="product__td">Класс защиты</div>
+															<div class="product__td">А2</div>
+														</div>
+														<div class="product__tr">
+															<div class="product__td">Эффект на стекле</div>
+															<div class="product__td">Белое матовое стекло</div>
+														</div>
+													</div>
 												</div>
-												<div class="product__tr">
-													<div class="product__td">Толщина</div>
-													<div class="product__td">600 микрон</div>
+
+												<div class="col-lg-5">
+
+													<div class="cocoen">
+														<img src="/assets/img/work-gallery/big/10.jpg" />
+														<img src="/assets/img/work-gallery/big/11.jpg" />
+													</div>
+
 												</div>
-												<div class="product__tr">
-													<div class="product__td">Светопропускание</div>
-													<div class="product__td">70%</div>
-												</div>
-												<div class="product__tr">
-													<div class="product__td">Цвет</div>
-													<div class="product__td">Серебристый</div>
-												</div>
-												<div class="product__tr">
-													<div class="product__td">Отражение энергии солнца</div>
-													<div class="product__td">Да</div>
-												</div>
-												<div class="product__tr">
-													<div class="product__td">Отражение инфракрасного излучения</div>
-													<div class="product__td">Да</div>
-												</div>
-												<div class="product__tr">
-													<div class="product__td">Класс защиты</div>
-													<div class="product__td">А2</div>
-												</div>
-												<div class="product__tr">
-													<div class="product__td">Эффект на стекле</div>
-													<div class="product__td">Белое матовое стекло</div>
-												</div>
+
 											</div>
+
 										</div>
 										<div class="tabs__content content">
 											<p>
@@ -1163,9 +1194,9 @@ title: Раздел
 
 			</div>
 
-			<div class="product__cart">
+			<div class="product__cart has_popap">
 				<p class="product__title">
-					Золотая плёнка
+					<a href="product.html">Золотая плёнка</a>
 				</p>
 				<div class="product__cart-inner">
 
@@ -1173,7 +1204,7 @@ title: Раздел
 						<div class="img__wrapper">
 							<img src="/assets/img/products/product-img.jpg" alt="Золотая плёнка">
 							<div class="product__overlay-box">
-								<button class="btn btn--white productVastView">Подробнее</button>
+								<a href="/section.html?789" class="btn btn--white popapOpen">Подробнее</a>
 							</div>
 						</div>
 					</div>
@@ -1191,8 +1222,11 @@ title: Раздел
 								</div>
 							</div>
 						</div>
-						<button class="btn btn--gradient">Заказать</button>
-						<button class="btn btn--gray">Бесплатный расчёт</button>
+						<div class="product__buttons">
+							<button class="btn btn--gradient">Заказать</button>
+							<button class="btn btn--gray openQuiz" data-title="Зеркальная солнцезащитная пленка ZS 5">Бесплатный
+								расчёт</button>
+						</div>
 					</div>
 					<table class="product__param">
 						<tr>
@@ -1227,16 +1261,16 @@ title: Раздел
 
 				</div>
 
-				<div class="product-popup">
-					<div class="product-popup__body">
-						<button class="product-popup__close">
+				<div class="product-cart" id="789">
+					<div class="product-cart__body">
+						<button class="product-cart__close">
 							<svg class="icon icon-close">
 								<use xlink:href="assets/img/svg/symbol/sprite.svg#close"></use>
 							</svg>
 						</button>
-						<div class="product-popup__content">
-							<div class="row">
-								<div class="col-lg-6">
+						<div class="product-cart__content">
+							<div class="product-cart__grid">
+								<div class="product-cart__grid-item">
 									<div class="product__gallery">
 										<div class="swiper-container">
 											<div class="swiper-wrapper">
@@ -1263,25 +1297,6 @@ title: Раздел
 													<img src="/assets/img/products/popup-img-1.jpg" alt="">
 												</div>
 
-												<div class="swiper-slide">
-													<a class="video-icon" href="https://www.youtube.com/watch?v=wza_1tr6CfU" data-fancybox
-														data-caption="nkijni">
-														<svg class="icon icon-video-icon">
-															<use xlink:href="assets/img/svg/symbol/sprite.svg#video-icon"></use>
-														</svg>
-													</a>
-													<ul class="gallery__action">
-														<li>
-															<a href="/assets/img/news/news-1.jpg" data-fancybox="popup-gallery" data-caption="nkijni">
-																<svg class="icon icon-zoom">
-																	<use xlink:href="assets/img/svg/symbol/sprite.svg#zoom"></use>
-																</svg>
-															</a>
-														</li>
-													</ul>
-													<img src="/assets/img/news/news-1.jpg" alt="">
-												</div>
-
 												<div class="swiper-slide video-slide">
 
 													<a href="https://www.youtube.com/watch?v=wza_1tr6CfU" data-fancybox data-caption="nkijni">
@@ -1297,65 +1312,70 @@ title: Раздел
 										</div>
 									</div>
 								</div>
-								<div class="col-lg-6">
-									<div class="product__description">
-										<p class="product__title">
-											Атермальная непрозрачная плёнка
-										</p>
-										<p class="product__dop-info">
-											Плёнка + монтаж
-										</p>
-										<div class="product__price-block">
-											<p class="product__price">от 322 руб.- 4390 руб.</p>
-											<div class="tooltip">
-												<svg class="icon icon-info">
-													<use xlink:href="assets/img/svg/symbol/sprite.svg#info"></use>
-												</svg>
-												<div class="tooltip__content">
-													Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, alias.
-												</div>
+								<div class="product-cart__grid-item">
+									<p class="product__title">
+										Атермальная непрозрачная плёнка
+									</p>
+									<p class="product__dop-info">
+										Плёнка + монтаж
+									</p>
+									<div class="product__price-block">
+										<p class="product__price">от 322 руб.- 4390 руб.</p>
+										<div class="tooltip">
+											<svg class="icon icon-info">
+												<use xlink:href="assets/img/svg/symbol/sprite.svg#info"></use>
+											</svg>
+											<div class="tooltip__content">
+												Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, alias.
 											</div>
 										</div>
-										<div class="product__buttons">
-											<button class="btn btn--gradient">Заказать</button>
-											<button class="btn btn--gray">Бесплатный расчёт</button>
-										</div>
-										<ul class="product__advantages">
-											<li>
-												<div class="product__advantages-img-wrapper">
-													<img src="/assets/img/icons/shield.png" alt="">
-												</div>
-												<span>
-													Защита от царапин
-												</span>
-											</li>
-											<li>
-												<div class="product__advantages-img-wrapper">
-													<img src="/assets/img/icons/sun-o.png" alt="">
-												</div>
-												<span>
-													Защита от ультрафиолета 98%
-												</span>
-											</li>
-											<li>
-												<div class="product__advantages-img-wrapper">
-													<img src="/assets/img/icons/diamond.png" alt="">
-												</div>
-												<span>
-													Гарантия на пленку от 3 лет
-												</span>
-											</li>
-											<li>
-												<div class="product__advantages-img-wrapper">
-													<img src="/assets/img/icons/paint-brush.png" alt="">
-												</div>
-												<span>
-													Качественный клеевой слой
-												</span>
-											</li>
-										</ul>
+									</div>
+									<div class="product__buttons">
+										<button class="btn btn--gradient">Заказать</button>
+										<button class="btn btn--gray openQuiz" data-title="Зеркальная солнцезащитная пленка ZS 5">Бесплатный
+											расчёт</button>
 									</div>
 								</div>
+								<div class="product-cart__grid-item">
+
+									<ul class="product__advantages">
+										<li>
+											<div class="product__advantages-img-wrapper">
+												<img src="/assets/img/icons/shield.png" alt="">
+											</div>
+											<span>
+												Защита от царапин
+											</span>
+										</li>
+										<li>
+											<div class="product__advantages-img-wrapper">
+												<img src="/assets/img/icons/sun-o.png" alt="">
+											</div>
+											<span>
+												Защита от ультрафиолета 98%
+											</span>
+										</li>
+										<li>
+											<div class="product__advantages-img-wrapper">
+												<img src="/assets/img/icons/diamond.png" alt="">
+											</div>
+											<span>
+												Гарантия на пленку от 3 лет
+											</span>
+										</li>
+										<li>
+											<div class="product__advantages-img-wrapper">
+												<img src="/assets/img/icons/paint-brush.png" alt="">
+											</div>
+											<span>
+												Качественный клеевой слой
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="row">
 								<div class="col-12">
 									<ul class="company_advantages">
 
@@ -1397,6 +1417,7 @@ title: Раздел
 
 									</ul>
 								</div>
+
 								<div class="col-12">
 									<div class="product__tabs">
 										<ul class="tabs__header">
@@ -1420,40 +1441,55 @@ title: Раздел
 											</li>
 										</ul>
 										<div class="tabs__content content active">
-											<div class="product__table">
-												<div class="product__tr">
-													<div class="product__td">Тип</div>
-													<div class="product__td">Зеркальная</div>
+											<div class="row">
+												<div class="col-lg-7">
+													<div class="product__table">
+														<div class="product__tr">
+															<div class="product__td">Тип</div>
+															<div class="product__td">Зеркальная</div>
+														</div>
+														<div class="product__tr">
+															<div class="product__td">Толщина</div>
+															<div class="product__td">600 микрон</div>
+														</div>
+														<div class="product__tr">
+															<div class="product__td">Светопропускание</div>
+															<div class="product__td">70%</div>
+														</div>
+														<div class="product__tr">
+															<div class="product__td">Цвет</div>
+															<div class="product__td">Серебристый</div>
+														</div>
+														<div class="product__tr">
+															<div class="product__td">Отражение энергии солнца</div>
+															<div class="product__td">Да</div>
+														</div>
+														<div class="product__tr">
+															<div class="product__td">Отражение инфракрасного излучения</div>
+															<div class="product__td">Да</div>
+														</div>
+														<div class="product__tr">
+															<div class="product__td">Класс защиты</div>
+															<div class="product__td">А2</div>
+														</div>
+														<div class="product__tr">
+															<div class="product__td">Эффект на стекле</div>
+															<div class="product__td">Белое матовое стекло</div>
+														</div>
+													</div>
 												</div>
-												<div class="product__tr">
-													<div class="product__td">Толщина</div>
-													<div class="product__td">600 микрон</div>
+
+												<div class="col-lg-5">
+
+													<div class="cocoen">
+														<img src="/assets/img/work-gallery/big/10.jpg" />
+														<img src="/assets/img/work-gallery/big/11.jpg" />
+													</div>
+
 												</div>
-												<div class="product__tr">
-													<div class="product__td">Светопропускание</div>
-													<div class="product__td">70%</div>
-												</div>
-												<div class="product__tr">
-													<div class="product__td">Цвет</div>
-													<div class="product__td">Серебристый</div>
-												</div>
-												<div class="product__tr">
-													<div class="product__td">Отражение энергии солнца</div>
-													<div class="product__td">Да</div>
-												</div>
-												<div class="product__tr">
-													<div class="product__td">Отражение инфракрасного излучения</div>
-													<div class="product__td">Да</div>
-												</div>
-												<div class="product__tr">
-													<div class="product__td">Класс защиты</div>
-													<div class="product__td">А2</div>
-												</div>
-												<div class="product__tr">
-													<div class="product__td">Эффект на стекле</div>
-													<div class="product__td">Белое матовое стекло</div>
-												</div>
+
 											</div>
+
 										</div>
 										<div class="tabs__content content">
 											<p>
@@ -1553,6 +1589,121 @@ title: Раздел
 
 		</div>
 	</section>
+	<div class="catalog-page">
+		<form id="mse2_filters" class="filter_form"> <button type="button" class="filter__close"> <svg
+					class="icon icon-close">
+					<use xlink:href="assets/img/svg/symbol/sprite.svg#close"></use>
+				</svg> </button>
+			<div class="single-sidebar-widget">
+				<ul id="mse2_resource|parent" class="filter_list">
+					<li class=" filter_item"> <button type="reset" class="btn custom_input hidden">Все</button> </li>
+					<li for="mse2_resource|parent_0" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_0" value="23"> <span
+								class="btn custom_input">Атермальные пленки</span> </label> </li>
+					<li for="mse2_resource|parent_1" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_1" value="22"> <span class="btn custom_input">Против
+								солнечных бликов</span> </label> </li>
+					<li for="mse2_resource|parent_2" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_2" value="115"> <span class="btn custom_input">Тонировка
+								окон</span> </label> </li>
+					<li for="mse2_resource|parent_3" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_3" value="32"> <span
+								class="btn custom_input">Солнцезащитные пленки</span> </label> </li>
+					<li for="mse2_resource|parent_4" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_4" value="25"> <span
+								class="btn custom_input">Зонирование пространства</span> </label> </li>
+					<li for="mse2_resource|parent_5" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_5" value="116"> <span class="btn custom_input">Тонировка
+								дверей</span> </label> </li>
+					<li for="mse2_resource|parent_6" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_6" value="28"> <span class="btn custom_input">Спастись
+								от жары</span> </label> </li>
+					<li for="mse2_resource|parent_7" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_7" value="33"> <span class="btn custom_input">Виниловые
+								пленки</span> </label> </li>
+					<li for="mse2_resource|parent_8" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_8" value="118"> <span class="btn custom_input">Тонировка
+								витрин</span> </label> </li>
+					<li for="mse2_resource|parent_9" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_9" value="20"> <span class="btn custom_input">Цветные
+								плёнки</span> </label> </li>
+					<li for="mse2_resource|parent_10" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_10" value="26"> <span
+								class="btn custom_input">Оформление интерьера и экстерьера</span> </label> </li>
+					<li for="mse2_resource|parent_11" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_11" value="119"> <span
+								class="btn custom_input">Тонировка фасадов</span> </label> </li>
+					<li for="mse2_resource|parent_12" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_12" value="34"> <span
+								class="btn custom_input">Энергосберегающие пленки</span> </label> </li>
+					<li for="mse2_resource|parent_13" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_13" value="29"> <span class="btn custom_input">Скрыть
+								обзор помещения снаружи</span> </label> </li>
+					<li for="mse2_resource|parent_14" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_14" value="120"> <span
+								class="btn custom_input">Тонировка балконов и лоджий</span> </label> </li>
+					<li for="mse2_resource|parent_15" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_15" value="35"> <span class="btn custom_input">Матовые
+								пленки</span> </label> </li>
+					<li for="mse2_resource|parent_16" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_16" value="30"> <span class="btn custom_input">Защита от
+								ударов и взломов</span> </label> </li>
+					<li for="mse2_resource|parent_17" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_17" value="121"> <span
+								class="btn custom_input">Тонировка офисных перегородок</span> </label> </li>
+					<li for="mse2_resource|parent_18" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_18" value="31"> <span class="btn custom_input">Избежать
+								выгорания вещей</span> </label> </li>
+					<li for="mse2_resource|parent_19" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_19" value="36"> <span
+								class="btn custom_input">Зеркальные пленки</span> </label> </li>
+					<li for="mse2_resource|parent_20" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_20" value="122"> <span
+								class="btn custom_input">Тонировка домов</span> </label> </li>
+					<li for="mse2_resource|parent_21" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_21" value="37"> <span
+								class="btn custom_input">Бронирующая пленка</span> </label> </li>
+					<li for="mse2_resource|parent_22" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_22" value="123"> <span
+								class="btn custom_input">Тонировка квартир</span> </label> </li>
+					<li for="mse2_resource|parent_23" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_23" value="38"> <span
+								class="btn custom_input">Декоративная пленка</span> </label> </li>
+					<li for="mse2_resource|parent_24" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_24" value="124"> <span
+								class="btn custom_input">Тонировка зданий</span> </label> </li>
+					<li for="mse2_resource|parent_25" class=" filter_item"> <label> <input class="default_input" type="checkbox"
+								name="resource|parent" id="mse2_resource|parent_25" value="125"> <span
+								class="btn custom_input">Тонировка офисов</span> </label> </li>
+				</ul>
+				<div class="sidebar-single price-sidebar" id="mse2_tv|price-min">
+					<div class="sidebar-title">По цене</div>
+					<div class="sidebar-body">
+						<div class="price-range-wrap">
+							<fieldset>
+								<div
+									class="price-range mse2_number_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+									data-min="1" data-max="1000">
+									<div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 100%;"></div><span
+										tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span><span
+										tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
+								</div>
+								<div class="mse2_number_inputs row">
+									<div class="col-6 price-min_0"> <label for="mse2_tv|price-min_0"> <input type="text"
+												name="tv|price-min" id="mse2_tv|price-min_0" value="650" data-original-value="650"
+												data-decimal="0" class=""> </label> </div>
+									<div class="col-6 price-min_1"> <label for="mse2_tv|price-min_1"> <input type="text"
+												name="tv|price-min" id="mse2_tv|price-min_1" value="2100" data-original-value="2100"
+												data-decimal="0" class=""> </label> </div>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
 
 	{{> section-advantages}}
 
@@ -1606,7 +1757,6 @@ title: Раздел
 	{{> advantages }}
 
 
-
 	{{> gallery-section }}
 
 	<section class="s-fag section-spacer">
@@ -1626,7 +1776,7 @@ title: Раздел
 				</div>
 				<div class="col-lg-6">
 					<div class="accordion">
-						<div class="accordion__item active">
+						<div class="accordion__item">
 							<div class="accordion__title">
 								<p>От перепада температур плёнка не отклеется?</p>
 
@@ -1693,6 +1843,36 @@ title: Раздел
 			</div>
 		</div>
 	</section>
+
+	<section class="section-spacer">
+		<div class="container content">
+			<h2>Способы оплаты</h2>
+			<p>Оплата осуществляется любым удобным для Вас способом:</p>
+
+			<ul class="payment__list">
+				<li><svg class="icon icon-credit-card">
+						<use xlink:href="assets/img/svg/symbol/sprite.svg#credit-card"></use>
+					</svg>
+					<div class="payment__description">
+						<p class="payment__title">Оплата через банк-клиент</p>
+						<p>Оплата после выставления счета через банк-клиент (например Сбербанк Онлайн, ВТБ24-Онлайн, Альфа-Клик
+							и.т.п.).</p>
+					</div>
+				</li>
+				<li><svg class="icon icon-money">
+						<use xlink:href="assets/img/svg/symbol/sprite.svg#money"></use>
+					</svg>
+					<div class="payment__description">
+						<p class="payment__title">Оплата через банк-клиент</p>
+						<p>Оплата после выставления счета через банк-клиент (например Сбербанк Онлайн, ВТБ24-Онлайн, Альфа-Клик
+							и.т.п.).</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+
 
 	{{> sertivicate }}
 
@@ -1718,3 +1898,708 @@ title: Раздел
 	</section>
 
 </main>
+
+
+<div class="quiz__popup" style="background-image: url('/assets/img/backgrounds/quiz-bg.jpg')">
+
+	<button class="quiz__close">
+		<svg class="icon icon-close icon-close-quiz">
+			<use xlink:href="assets/img/svg/symbol/sprite.svg#close"></use>
+		</svg>
+	</button>
+	<section class="quiz--popup s-quiz">
+		<div class="quiz--popup__wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 title-center has-subtitle">
+						<p class="decore-title last-word">Не определились с видом плёнки?</p>
+						<p>
+							Ответьте на 6 вопросов и получите подбор пленки и расчет стоимости работ под ключ в трех<br> вариантах
+							под
+							ваши задачи и забронируйте скидку 10%!
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<form class="quiz-form">
+				<input type="hidden" value="" class="calltitle">
+
+				<div class="container">
+					<div class="quiz__title">
+						Шаг <span class="quiz__current">1</span> /
+						<span class="quiz__total">7</span>
+						<span class="quiz__current-title"></span>
+					</div>
+				</div>
+
+
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="quiz__step quiz__step--images">
+
+								<div class="quiz__content ">
+									<div class="container">
+										<div class="row justify-content-center">
+											<div class="d-flex justify-content-center mb-30 col-lg-2 col-md-4 col-sm-6">
+												<div class="quiz__images-input">
+													<label>
+														<input class="default-field" type="checkbox">
+														<div class="custom__input">
+															<div class="img-border">
+																<img src="/assets/img/quiz-1.jpg" alt="">
+															</div>
+															<p class="input__title">
+																Тонировка фасада здания
+															</p>
+														</div>
+													</label>
+												</div>
+											</div>
+											<div class="d-flex justify-content-center mb-30 col-lg-2 col-md-4 col-sm-6">
+												<div class="quiz__images-input">
+													<label>
+														<input class="default-field" type="checkbox">
+														<div class="custom__input">
+															<div class="img-border">
+																<img src="/assets/img/quiz-1.jpg" alt="">
+															</div>
+															<p class="input__title">
+																Тонировка фасада здания
+															</p>
+														</div>
+													</label>
+												</div>
+											</div>
+											<div class="d-flex justify-content-center mb-30 col-lg-2 col-md-4 col-sm-6">
+												<div class="quiz__images-input">
+													<label>
+														<input class="default-field" type="checkbox">
+														<div class="custom__input">
+															<div class="img-border">
+																<img src="/assets/img/quiz-1.jpg" alt="">
+															</div>
+															<p class="input__title">
+																Тонировка фасада здания
+															</p>
+														</div>
+													</label>
+												</div>
+											</div>
+											<div class="d-flex justify-content-center mb-30 col-lg-2 col-md-4 col-sm-6">
+												<div class="quiz__images-input">
+													<label>
+														<input class="default-field" type="checkbox">
+														<div class="custom__input">
+															<div class="img-border">
+																<img src="/assets/img/quiz-1.jpg" alt="">
+															</div>
+															<p class="input__title">
+																Тонировка фасада здания
+															</p>
+														</div>
+													</label>
+												</div>
+											</div>
+											<div class="d-flex justify-content-center mb-30 col-lg-2 col-md-4 col-sm-6">
+												<div class="quiz__images-input">
+													<label>
+														<input class="default-field" type="checkbox">
+														<div class="custom__input">
+															<div class="img-border">
+																<img src="/assets/img/quiz-1.jpg" alt="">
+															</div>
+															<p class="input__title">
+																Тонировка фасада здания
+															</p>
+														</div>
+													</label>
+												</div>
+											</div>
+											<div class="d-flex justify-content-center mb-30 col-lg-2 col-md-4 col-sm-6">
+												<div class="quiz__images-input">
+													<label>
+														<input class="default-field" type="checkbox">
+														<div class="custom__input">
+															<div class="img-border">
+																<img src="/assets/img/quiz-1.jpg" alt="">
+															</div>
+															<p class="input__title">
+																Тонировка фасада здания
+															</p>
+														</div>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="quiz__step quiz__step--checkboxes">
+								<div class="quiz__content">
+									<div class="container">
+										<div class="row justify-content-center">
+											<div class="col-12">
+												<div class="quiz__row w-20">
+													<div class="quiz__checkbox-item">
+														<label>
+															<input class="default-field" type="checkbox">
+															<div class="custom__input">
+																<span class="custom__checkbox">
+																	<svg class="icon icon-check">
+																		<use xlink:href="assets/img/svg/symbol/sprite.svg#check"></use>
+																	</svg>
+																</span>
+																<span class="custom__checkbox-title">
+																	Коммерческий заказ
+																</span>
+															</div>
+														</label>
+													</div>
+													<div class="quiz__checkbox-item">
+														<label>
+															<input class="default-field" type="checkbox">
+															<div class="custom__input">
+																<span class="custom__checkbox">
+																	<svg class="icon icon-check">
+																		<use xlink:href="assets/img/svg/symbol/sprite.svg#check"></use>
+																	</svg>
+																</span>
+																<span class="custom__checkbox-title">
+																	Скрыть обзор помещения снаружи
+																</span>
+															</div>
+														</label>
+													</div>
+													<div class="quiz__checkbox-item">
+														<label>
+															<input class="default-field" type="checkbox">
+															<div class="custom__input">
+																<span class="custom__checkbox">
+																	<svg class="icon icon-check">
+																		<use xlink:href="assets/img/svg/symbol/sprite.svg#check"></use>
+																	</svg>
+																</span>
+																<span class="custom__checkbox-title">
+																	Спасти вещи в помещениии от выгорания
+																</span>
+															</div>
+														</label>
+													</div>
+													<div class="quiz__checkbox-item">
+														<label>
+															<input class="default-field" type="checkbox">
+															<div class="custom__input">
+																<span class="custom__checkbox">
+																	<svg class="icon icon-check">
+																		<use xlink:href="assets/img/svg/symbol/sprite.svg#check"></use>
+																	</svg>
+																</span>
+																<span class="custom__checkbox-title">
+																	Другое
+																</span>
+															</div>
+														</label>
+													</div>
+													<div class="quiz__checkbox-item">
+														<label>
+															<input class="default-field" type="checkbox">
+															<div class="custom__input">
+																<span class="custom__checkbox">
+																	<svg class="icon icon-check">
+																		<use xlink:href="assets/img/svg/symbol/sprite.svg#check"></use>
+																	</svg>
+																</span>
+																<span class="custom__checkbox-title">
+																	Спастись от жары (солнечная сторона)
+																</span>
+															</div>
+														</label>
+													</div>
+													<div class="quiz__checkbox-item">
+														<label>
+															<input class="default-field" type="checkbox">
+															<div class="custom__input">
+																<span class="custom__checkbox">
+																	<svg class="icon icon-check">
+																		<use xlink:href="assets/img/svg/symbol/sprite.svg#check"></use>
+																	</svg>
+																</span>
+																<span class="custom__checkbox-title">
+																	Избавиться от бликов
+																</span>
+															</div>
+														</label>
+													</div>
+													<div class="quiz__checkbox-item">
+														<label>
+															<input class="default-field" type="checkbox">
+															<div class="custom__input">
+																<span class="custom__checkbox">
+																	<svg class="icon icon-check">
+																		<use xlink:href="assets/img/svg/symbol/sprite.svg#check"></use>
+																	</svg>
+																</span>
+																<span class="custom__checkbox-title">
+																	Защита от ударов
+																</span>
+															</div>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="quiz__step quiz__step--checkboxes">
+								<div class="quiz__content">
+									<div class="container">
+										<div class="row">
+											<div class="col-lg-4  col-md-6 offset-lg-2">
+												<p class="quiz_titles">
+													Введите примерную общую площадь
+												</p>
+												<ul class="quiz__radio-list">
+													<li>
+														<label>
+															<input type="radio" name="ton-area" class="default-field">
+															<div class="custom__input">
+																<span class="custom__radio"></span>
+																<span class="custom__radio-title">
+																	До 10 кв. м.
+																</span>
+															</div>
+														</label>
+													</li>
+													<li>
+														<label>
+															<input type="radio" name="ton-area" class="default-field">
+															<div class="custom__input">
+																<span class="custom__radio"></span>
+																<span class="custom__radio-title">
+																	До 20 кв. м.
+																</span>
+															</div>
+														</label>
+													</li>
+													<li>
+														<label>
+															<input type="radio" name="ton-area" class="default-field">
+															<div class="custom__input">
+																<span class="custom__radio"></span>
+																<span class="custom__radio-title">
+																	До 30 кв. м.
+																</span>
+															</div>
+														</label>
+													</li>
+													<li>
+														<label>
+															<input type="radio" name="ton-area" class="default-field">
+															<div class="custom__input">
+																<span class="custom__radio"></span>
+																<span class="custom__radio-title">
+																	До 50 кв. м.
+																</span>
+															</div>
+														</label>
+													</li>
+													<li>
+														<label>
+															<input type="radio" name="ton-area" class="default-field">
+															<div class="custom__input">
+																<span class="custom__radio"></span>
+																<span class="custom__radio-title">
+																	До 100 кв. м.
+																</span>
+															</div>
+														</label>
+													</li>
+													<li>
+														<label>
+															<input type="radio" name="ton-area" class="default-field">
+															<div class="custom__input">
+																<span class="custom__radio"></span>
+																<span class="custom__radio-title">
+																	Более 100 кв. м.
+																</span>
+															</div>
+													</li>
+													</label>
+												</ul>
+												<label class="user-variant">
+													<span class="user-variant__title">
+														Свой вариант ответа
+													</span>
+													<input type="text">
+												</label>
+											</div>
+											<div class="col-lg-4 col-md-6 ">
+												<p class="quiz_titles">
+													Или введите количество стёкол
+												</p>
+												<ul class="quiz__radio-list">
+													<li>
+														<label>
+															<input type="radio" name="ton-area" class="default-field">
+															<div class="custom__input">
+
+																<span class="custom__radio"></span>
+																<span class="custom__radio-title">
+																	1 стекло
+																</span>
+															</div>
+														</label>
+													</li>
+													<li>
+														<label>
+															<input type="radio" name="ton-area" class="default-field">
+															<div class="custom__input">
+																<span class="custom__radio"></span>
+																<span class="custom__radio-title">
+																	2 стекла
+																</span>
+															</div>
+														</label>
+													</li>
+													<li>
+														<label>
+															<input type="radio" name="ton-area" class="default-field">
+															<div class="custom__input">
+																<span class="custom__radio"></span>
+																<span class="custom__radio-title">
+																	3 стекла
+																</span>
+															</div>
+														</label>
+													</li>
+													<li>
+														<label>
+															<input type="radio" name="ton-area" class="default-field">
+															<div class="custom__input">
+																<span class="custom__radio"></span>
+																<span class="custom__radio-title">
+																	4 стекла
+																</span>
+															</div>
+														</label>
+													</li>
+													<li>
+														<label>
+															<input type="radio" name="ton-area" class="default-field">
+															<div class="custom__input">
+																<span class="custom__radio"></span>
+																<span class="custom__radio-title">
+																	5 стёкол
+																</span>
+															</div>
+														</label>
+													</li>
+													<li>
+														<label>
+															<input type="radio" name="ton-area" class="default-field">
+															<div class="custom__input">
+																<span class="custom__radio"></span>
+																<span class="custom__radio-title">
+																	Более 5 стёкол
+																</span>
+															</div>
+														</label>
+													</li>
+												</ul>
+												<label class="user-variant">
+													<span class="user-variant__title">
+														Свой вариант ответа
+													</span>
+													<input type="text">
+												</label>
+											</div>
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="quiz__step quiz__step--checkboxes">
+								<div class="quiz__content">
+									<div class="container">
+										<div class="row justify-content-center">
+											<div class="col-12 mb-30">
+												<div class="quiz__row w-100">
+													<div class="quiz__row-wrapper">
+														<div class="quiz__checkbox-item">
+															<label>
+																<input class="default-field" type="checkbox">
+																<div class="custom__input">
+																	<span class="custom__checkbox">
+																		<svg class="icon icon-check">
+																			<use xlink:href="assets/img/svg/symbol/sprite.svg#check"></use>
+																		</svg>
+																	</span>
+																	<span class="custom__checkbox-title">
+																		Нет
+																	</span>
+																</div>
+															</label>
+														</div>
+														<div class="quiz__checkbox-item">
+															<label>
+																<input class="default-field" type="checkbox">
+																<div class="custom__input">
+																	<span class="custom__checkbox">
+																		<svg class="icon icon-check">
+																			<use xlink:href="assets/img/svg/symbol/sprite.svg#check"></use>
+																		</svg>
+																	</span>
+																	<span class="custom__checkbox-title">
+																		Да, есть решётки
+																	</span>
+																</div>
+															</label>
+														</div>
+														<div class="quiz__checkbox-item">
+															<label>
+																<input class="default-field" type="checkbox">
+																<div class="custom__input">
+																	<span class="custom__checkbox">
+																		<svg class="icon icon-check">
+																			<use xlink:href="assets/img/svg/symbol/sprite.svg#check"></use>
+																		</svg>
+																	</span>
+																	<span class="custom__checkbox-title">
+																		Другие сложности
+																	</span>
+																</div>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="quiz__step quiz__step--images">
+								<div class="quiz__content i-3">
+									<div class="container">
+										<div class="row ">
+											<div class="col-lg-10 offset-lg-1 d-flex justify-content-around quiz__content-center">
+												<div class="d-flex justify-content-center mb-30 ">
+													<div class="quiz__images-input">
+														<label>
+															<input class="default-field" type="checkbox">
+															<div class="custom__input">
+																<div class="img-border">
+																	<img src="/assets/img/quiz-1.jpg" alt="">
+																</div>
+																<p class="input__title">
+																	Тонировка фасада здания
+																</p>
+															</div>
+														</label>
+													</div>
+												</div>
+												<div class="d-flex justify-content-center mb-30 ">
+													<div class="quiz__images-input">
+														<label>
+															<input class="default-field" type="checkbox">
+															<div class="custom__input">
+																<div class="img-border">
+																	<img src="/assets/img/quiz-1.jpg" alt="">
+																</div>
+																<p class="input__title">
+																	Тонировка фасада здания
+																</p>
+															</div>
+														</label>
+													</div>
+												</div>
+												<div class="d-flex justify-content-center mb-30">
+													<div class="quiz__images-input">
+														<label>
+															<input class="default-field" type="checkbox">
+															<div class="custom__input">
+																<div class="img-border">
+																	<img src="/assets/img/quiz-1.jpg" alt="">
+																</div>
+																<p class="input__title">
+																	Тонировка фасада здания
+																</p>
+															</div>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="quiz__step quiz__step--checkboxes">
+								<div class="quiz__content">
+									<div class="container">
+										<div class="row justify-content-center">
+											<div class="col-12">
+												<div class="quiz__row">
+
+													<ul class="quiz__row-list">
+														<li>
+															<div class="quiz__checkbox-item">
+																<label>
+																	<input class="default-field" type="checkbox">
+																	<div class="custom__input">
+																		<span class="custom__checkbox">
+																			<svg class="icon icon-check">
+																				<use xlink:href="assets/img/svg/symbol/sprite.svg#check"></use>
+																			</svg>
+																		</span>
+																		<span class="custom__checkbox-title">
+																			Консультация по телефоны
+																		</span>
+																	</div>
+																</label>
+															</div>
+														</li>
+														<li>
+															<div class="quiz__checkbox-item">
+																<label>
+																	<input class="default-field" type="checkbox">
+																	<div class="custom__input">
+																		<span class="custom__checkbox">
+																			<svg class="icon icon-check">
+																				<use xlink:href="assets/img/svg/symbol/sprite.svg#check"></use>
+																			</svg>
+																		</span>
+																		<span class="custom__checkbox-title">
+																			СМС на телефон
+																		</span>
+																	</div>
+																</label>
+															</div>
+														</li>
+														<li>
+															<div class="quiz__checkbox-item">
+																<label>
+																	<input class="default-field" type="checkbox">
+																	<div class="custom__input">
+																		<span class="custom__checkbox">
+																			<svg class="icon icon-check">
+																				<use xlink:href="assets/img/svg/symbol/sprite.svg#check"></use>
+																			</svg>
+																		</span>
+																		<span class="custom__checkbox-title">
+																			Сообщение на Whats App
+																		</span>
+																	</div>
+																</label>
+															</div>
+														</li>
+														<li>
+															<div class="quiz__checkbox-item">
+																<label>
+																	<input class="default-field" type="checkbox">
+																	<div class="custom__input">
+																		<span class="custom__checkbox">
+																			<svg class="icon icon-check">
+																				<use xlink:href="assets/img/svg/symbol/sprite.svg#check"></use>
+																			</svg>
+																		</span>
+																		<span class="custom__checkbox-title">
+																			Сообщение на Viber
+																		</span>
+																	</div>
+																</label>
+															</div>
+														</li>
+														<li>
+															<div class="quiz__checkbox-item">
+																<label>
+																	<input class="default-field" type="checkbox">
+																	<div class="custom__input">
+																		<span class="custom__checkbox">
+																			<svg class="icon icon-check">
+																				<use xlink:href="assets/img/svg/symbol/sprite.svg#check"></use>
+																			</svg>
+																		</span>
+																		<span class="custom__checkbox-title">
+																			По электронной почте
+																		</span>
+																	</div>
+																</label>
+															</div>
+														</li>
+
+													</ul>
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="quiz__step">
+								<div class="quiz__content">
+									<div class="container">
+										<div class="row mb-20">
+											<div class="offset-lg-3 col-lg-3 col-sm-6">
+												<fieldset><input type="text" placeholder="Имя*"></fieldset>
+												<fieldset><input type="text" placeholder="Телефон*"></fieldset>
+												<fieldset><input type="text" placeholder="Email"></fieldset>
+											</div>
+											<div class="col-lg-3 col-sm-6"><textarea placeholder="Комментарий"></textarea></div>
+										</div>
+									</div>
+
+
+									<div class="igree mb-30">
+										<p>
+											Нажимая на кнопку Вы даёте согласие на обработку персональных данных
+										</p>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="quiz__action quiz--toggle">
+						<button type="button" class="btn btn--white quiz--prev">
+							Назад
+						</button>
+						<button type="button" class="btn btn--gradient btn--white-hover quiz--next">
+							Далее
+						</button>
+						<button type="submit" class="btn btn--gradient btn--white-hover quiz--submit hidden">Отправить</button>
+					</div>
+				</div>
+				<div class="hidden quiz__title-arr">
+					Для какого объекта нужна тонировка?||
+					Для каких целей Вы планируете произвести тонирование? Можно выбрать несколько ответов.||
+					Укажите количество стекол для тонирования или примерную площадь.||
+					Есть ли решётки на окнах или другие сложности с доступом?||
+					Для какого объекта нужна тонировка?||
+					Как Вам удобно получить результаты расчёта?,Укажите ваши контактные данные для предоставления расчётов||
+				</div>
+			</form>
+
+		</div>
+	</section>
+
+</div>

@@ -131,12 +131,16 @@ header
 					color: $accent
 			&.has-menu
 				&::before
-					content: '>'
-					font-size: rem(18px)
+					content: ''
 					position: absolute
 					right: rem(19px)
 					top: 50%
 					transform: translateY(-50%)
+					width: rem(12px)
+					height: rem(12px)
+					background-image: url(../img/svg/right-arrow-angle.svg)
+					background-size: contain
+					background-repeat: no-repeat
 		a, span
 			font-family: $second
 			color: $text

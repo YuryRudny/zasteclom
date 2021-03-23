@@ -1,11 +1,43 @@
+.quiz__page
+	position: relative
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	
+	&::before
+		content: ''
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		background-color: rgba(0, 0, 0, 0.8)
+		z-index: 1
+	.pages-top
+		background-image: none !important
+		position: relative
+		z-index: 2
+		&::before
+			display: none
+	.s-quiz
+		background-image: none !important
+		padding-top: 0
+		&::before
+			display: none
+.s-quiz__content
+	.s-quiz__content--form
+		transition: opacity .1s ease
+	&.active
+		.s-quiz__content--form
+			opacity: 0
 .s-quiz
 	background-repeat: no-repeat
 	background-position: center
 	background-size: cover
 	position: relative
 	color: #fff
-	padding-top: rem(70px)
 	padding-bottom: rem(70px)
+	padding-top: rem(70px)
 	::placeholder
 		font-size: rem(16px)
 		font-weight: 300
@@ -28,6 +60,9 @@
 	position: relative
 	z-index: 5
 .quiz__images-input
+	padding-top: rem(10px)
+	.custom__input
+		max-width: 200px
 	label
 		&:hover
 			.img-border
@@ -37,6 +72,7 @@
 	.img-border
 			&::before
 				border-color: $accent
+				transform: skewY(5deg)
 	.custom__checkbox
 		.icon
 			opacity: 1
@@ -71,16 +107,48 @@
 	margin: 0 auto
 	column-count: 2
 	margin-bottom: rem(30px)
+	+media(575px)
+		column-count: 1
 	li
 		width: 80%
+		+media(575px)
+			width: 100%
+.quiz__content-center
+	flex-wrap: wrap
+
+	+media(768px)
+	.quiz__images-input
+		margin-right: rem(40px)
+		margin-left: rem(40px)
+		+media(768px)
+			margin-right: rem(15px)
+			margin-left: rem(15px)
+			width: 40%
 .quiz__row-wrapper
 	display: flex
 	justify-content: center
 	flex-direction: column
+.quiz-separetor
+	position: relative
+	padding-right: rem(30px)
+	margin-right: rem(15px)
+	+media(992px)
+		padding-right: rem(15px)
+		margin-right: rem(0px)
+	+media(768px)
+		&::before
+			display: none
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: rem(15px)
+		width: 2px
+		background-color: #fff
+		right: 1px
 .quiz__step
-	display: none
 	&.active
-		display: block
+
 	label
 		cursor: pointer
 	fieldset
@@ -117,6 +185,7 @@
 		font-size: rem(20px)
 		font-weight: 300
 		text-align: center
+		height: 
 .quiz__title
 	font-size: rem(24px)
 	font-weight: bold
@@ -126,10 +195,14 @@
 .quiz__action
 	display: flex
 	justify-content: center
+	position: relative
+	z-index: 2
+	height: 
 	.btn
 		padding-left: rem(60px)
 		padding-right: rem(60px)
-		margin-right: rem(30px)
+		margin-right: rem(15px)
+		margin-left: rem(15px)
 		&:last-child
 			margin-right: 0
 .quiz__checkbox-item
@@ -143,6 +216,10 @@
 		height: rem(43px)
 		border: rem(2px) solid #fff
 		margin-right: rem(50px)
+		+media(768px)
+			width: rem(35px)
+			height: rem(35px)
+			margin-right: rem(20px)
 		.icon
 			font-size: rem(45px)
 			transform: translate(3px, -9px) 
@@ -152,6 +229,8 @@
 	.custom__checkbox-title
 		font-size: rem(20px)
 		font-weight: bold
+		+media(768px)
+			font-size: rem(18px)
 .quiz_titles
 	font-size: rem(20px)
 	font-weight: bold
@@ -161,7 +240,12 @@
 	li
 		display: flex
 		align-items: center
-		margin-bottom: rem(14px)
+		margin: 0
+		label
+			width: 100%
+			padding: rem(7px) 0
+			&:hover
+				background-color: transparent
 	.custom__input
 		display: flex
 		align-items: center

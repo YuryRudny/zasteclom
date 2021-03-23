@@ -9,6 +9,9 @@ ul
 	margin: 0
 	li
 		list-style-type: none
+		font-size: 1rem
+.swiper-button-prev:after, .swiper-button-next:after
+	font-size: rem(25px)
 .content
 	blockquote
 		width: 80%
@@ -37,16 +40,6 @@ ul
 		margin-left: rem(30px)
 		+media(992px)
 			padding-left: rem(30px)
-		&.three-column
-			display: flex
-			justify-content: space-between
-			flex-wrap: wrap
-			li
-				width: 33.333%
-				+media(992px)
-					width: 50%
-				+media(585px)
-					width: 100%
 	li
 		position: relative
 		&::before
@@ -84,10 +77,24 @@ ul
 		margin-top: rem(50px)
 		float: left
 		display: inline-block
+	&.three-column
+		ul
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+			li
+				width: 33.333%
+				+media(992px)
+					width: 50%
+				+media(585px)
+					width: 100%
 .igree
 	text-align: center
 	p
 		font-weight: 300
+	a
+		color: inherit
+		text-decoration: underline
 figure
 	margin: 0
 a
@@ -157,7 +164,9 @@ strong
 			&::before
 				background-image: url(../img/icons/title-decore--white.png)
 	&--noimage
-		span
+		span.first
+			padding-top: 0
+			padding-bottom: 0
 			&::before
 				display: none
 	&--no-last
@@ -216,3 +225,42 @@ strong
 	img
 		transition: all 2s ease 
 		transition: all 2s ease 
+.shadow-transition
+	box-shadow: $shadow
+	transition: $shadow-transition
+	&:hover
+		box-shadow: $shadow-hover
+.chess-img
+	.border-images
+		margin-top: rem(30px)
+		margin-bottom: rem(30px)
+		img
+			height: auto !important
+		&.image-rigth
+			float: right
+			margin-right: 0
+			margin-left: (30px)
+			+media(768px)
+				float: none
+				margin-right: 20%
+				margin-left: 0
+			+media(575px)
+				margin-right: 0
+				width: 100%
+				img
+					width: 100% !important
+		&.image-left
+			float: left
+			margin-right: rem(30px)
+			margin-left: 0
+			+media(768px)
+				float: none
+				margin-right: 20%
+				margin-left: 0
+			+media(575px)
+				margin-right: 0
+				width: 100%
+				img
+					width: 100% !important
+			
+		

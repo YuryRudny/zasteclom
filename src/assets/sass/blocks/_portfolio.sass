@@ -1,0 +1,152 @@
+.portfolio-page
+	figure
+		&:hover
+			.portfolio__top
+				padding-top: rem(30px)
+			.portfolio__bottom
+				height: 100%
+				visibility: visible
+				padding-bottom: rem(15px)
+			.portfolio__link
+				opacity: 1
+				transform: translateY(0)
+
+	figcaption
+		overflow: hidden
+		display: flex
+		flex-direction: column
+		align-items: stretch
+.portfolio__top
+	height: rem(74px)
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	padding: rem(15px) rem(30px)
+	margin-bottom: 0
+.portfolio__title
+	font-family: $title
+	font-size: rem(20px)
+	line-height: 1
+	font-weight: bold
+.portfolio__bottom
+	display: flex
+	flex-direction: column
+	height: 0
+	overflow: hidden
+	visibility: hidden
+	padding: 0 rem(30px)
+.portfolio__list
+	font-weight: 300
+	font-size: 18px
+	margin-top: auto
+	margin-bottom: auto
+.portfolio__link
+	margin-left: auto
+	color: #fff
+	text-decoration: none
+	opacity: 0
+	transform: translateY(-10px)
+	transition: all .3s ease
+	.icon
+		transition: all .3s ease
+	&:hover
+		color: #fff
+		.icon
+			transform: translateX(3px)
+.portfolio__gallery
+	.swiper-container
+		width: 100%
+		height: 300px
+		margin-left: auto
+		margin-right: auto
+
+	.swiper-slide
+		background-size: cover
+		background-position: center
+
+	.gallery-top
+		height: 80%
+		width: 100%
+
+	.gallery-thumbs
+		height: 20%
+		box-sizing: border-box
+		padding: 10px 0
+		.swiper-wrapper
+			display: flex
+			justify-content: center
+		.swiper-slide
+			height: 100%
+			opacity: 0.4
+			cursor: pointer
+
+		.swiper-slide-thumb-active
+			opacity: 1
+.portfolio-description
+	.btn
+		display: inline-block
+		text-align: center
+	p
+		font-size: rem(18px)
+		font-weight: 300
+		color: $text-ligth
+	.portfolio__title
+		font-family: $title
+		font-size: rem(24px)
+		font-weight: bold
+		margin-bottom: rem(20px)
+		color: $text
+.portfolio__param
+	margin: rem(28px) 0
+	padding: rem(28px) 0
+	border-bottom: 1px solid $color-border
+	border-top: 1px solid $color-border
+	li
+		margin-bottom: rem(10px)
+		&:last-child
+			margin-bottom: 0
+
+.portfolio__icon
+	align-items: flex-start
+	display: flex
+	.icon
+		fill: $icon-fill
+		font-size: rem(18px)
+		margin-right: rem(20px)
+		transform: translateY(rem(4px))
+.portfolio__icon-link
+	margin-left: rem(8px)
+	text-decoration: underline
+	color: $accent
+.portfolio__personal
+	margin-bottom: rem(30px)
+	.personal__description
+		p
+			margin-bottom: 0
+			line-height: 1.2
+	.swiper-container
+		margin-left: rem(-15px)
+		margin-right: rem(-15px)
+		padding-left: rem(25px)
+		padding-right: rem(25px)
+	.swiper-buttons
+		&::after
+			display: none
+		.icon
+			fill: $icon-fill
+			font-size: rem(18px)
+	.swiper-button-prev
+		left: rem(-8px)
+	.swiper-button-next
+		right: rem(-8px)
+	img
+		margin-bottom: auto
+		margin-right: rem(15px)
+		width: auto !important
+		flex-shrink: 0
+	.swiper-slide
+		display: flex
+		align-items: center
+
+
+

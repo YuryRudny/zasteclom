@@ -11,9 +11,15 @@
 		</div>
 		<form class="quiz-form">
 
-			<div class="quiz__step active ">
-				<div class="quiz__title">Шаг 1/7 Для какого объекта нужна тонировка?</div>
-				<div class="quiz__content">
+			<div class="quiz__title">
+				Шаг <span class="quiz__current">1</span> /
+				<span class="quiz__total">7</span>
+				<span class="quiz__current-title"></span>
+			</div>
+
+			<div class="quiz__step quiz__step--images">
+
+				<div class="quiz__content ">
 					<div class="row justify-content-center">
 						<div class="d-flex justify-content-center mb-30 col-lg-2 col-md-4 col-sm-6">
 							<div class="quiz__images-input">
@@ -107,16 +113,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="quiz__action">
-					<button type="button" class="btn btn--gradient btn--white-hover">
-						Далее
-					</button>
-				</div>
+
 			</div>
 
-			<div class="quiz__step active">
-				<div class="quiz__title">Шаг 2/7 Для каких целей Вы планируете произвести тонирование? Можно выбрать несколько
-					ответов.</div>
+			<div class="quiz__step quiz__step--checkboxes">
 				<div class="quiz__content">
 					<div class="row justify-content-center">
 						<div class="col-12">
@@ -230,18 +230,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="quiz__action">
-					<button type="button" class="btn btn--white">
-						Назад
-					</button>
-					<button type="button" class="btn btn--gradient btn--white-hover">
-						Далее
-					</button>
-				</div>
 			</div>
 
-			<div class="quiz__step active">
-				<div class="quiz__title">3/7 Укажите количество стекол для тонирования или примерную площадь.</div>
+			<div class="quiz__step quiz__step--checkboxes">
 				<div class="quiz__content">
 					<div class="row">
 						<div class="col-4 offset-2">
@@ -407,18 +398,9 @@
 					</div>
 
 				</div>
-				<div class="quiz__action">
-					<button type="button" class="btn btn--white">
-						Назад
-					</button>
-					<button type="button" class="btn btn--gradient btn--white-hover">
-						Далее
-					</button>
-				</div>
 			</div>
 
-			<div class="quiz__step active">
-				<div class="quiz__title">Шаг 4/7 Есть ли решётки на окнах или другие сложности с доступом?</div>
+			<div class="quiz__step quiz__step--checkboxes">
 				<div class="quiz__content">
 					<div class="row justify-content-center">
 						<div class="col-12">
@@ -474,18 +456,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="quiz__action">
-					<button type="button" class="btn btn--white">
-						Назад
-					</button>
-					<button type="button" class="btn btn--gradient btn--white-hover">
-						Далее
-					</button>
-				</div>
 			</div>
 
-			<div class="quiz__step active">
-				<div class="quiz__title">Шаг 5/7 Как Вам удобно получить результаты расчёта?</div>
+			<div class="quiz__step quiz__step--checkboxes">
 				<div class="quiz__content">
 					<div class="row justify-content-center">
 						<div class="col-12">
@@ -584,18 +557,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="quiz__action">
-					<button type="button" class="btn btn--white">
-						Назад
-					</button>
-					<button type="button" class="btn btn--gradient btn--white-hover">
-						Далее
-					</button>
-				</div>
 			</div>
 
-			<div class="quiz__step active">
-				<div class="quiz__title">Шаг 6/7 Для какого объекта нужна тонировка?</div>
+			<div class="quiz__step quiz__step--images">
 				<div class="quiz__content i-3">
 					<div class="row ">
 						<div class="col-lg-10 offset-lg-1 d-flex justify-content-around">
@@ -647,18 +611,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="quiz__action">
-					<button type="button" class="btn btn--white">
-						Назад
-					</button>
-					<button type="button" class="btn btn--gradient btn--white-hover">
-						Далее
-					</button>
-				</div>
 			</div>
 
-			<div class="quiz__step active">
-				<div class="quiz__title">Шаг 7/7 Укажите ваши контактные данные для предоставления расчётов</div>
+			<div class="quiz__step">
 				<div class="quiz__content">
 					<div class="row mb-20">
 						<div class="offset-lg-3 col-lg-3 col-sm-6">
@@ -676,16 +631,19 @@
 
 					</div>
 				</div>
-				<div class="quiz__action">
-					<button type="button" class="btn btn--white">
-						Назад
-					</button>
-					<button type="button" class="btn btn--gradient btn--white-hover">
-						Отправить
-					</button>
-				</div>
+			</div>
+			<div class="quiz__action quiz--toggle">
+				<button type="button" class="btn btn--white quiz--prev">
+					Назад
+				</button>
+				<button type="button" class="btn btn--gradient btn--white-hover quiz--next">
+					Далее
+				</button>
+				<button type="submit" class="btn btn--gradient btn--white-hover quiz--submit hidden">Отправить</button>
 			</div>
 
 		</form>
+
+
 	</div>
 </section>

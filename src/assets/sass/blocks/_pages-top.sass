@@ -1,26 +1,29 @@
 .pages-top
-	padding-top: rem(78px);
-	padding-bottom: rem(78px);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: left center;
-	text-align: center;
+	padding-top: rem(78px)
+	padding-bottom: rem(78px)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: left center
+	text-align: center
 	color: #fff
-	position: relative;
+	position: relative
 	a
 		color: #fff
 	&::before
 		content: ''
 		@extend %position-cover
-		background-color: rgba(#000, .3);
+		background-color: rgba(#000, .3)
 .pages-title
-	font-size: rem(48px);
-	font-weight: bold;
-	margin-bottom: rem(20px);
+	font-size: rem(48px)
+	font-weight: bold
+	margin-bottom: rem(20px)
+	line-height: 1.1
+	+media(585px)
+		font-size: rem(38px)
 .breadcrumbs
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-wrap: wrap
 	li
-		margin-right: rem(6px);
+		margin-right: rem(6px)

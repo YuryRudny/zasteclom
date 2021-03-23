@@ -1,4 +1,4 @@
-.product-popup
+.product-cart
 	position: fixed
 	top: 0
 	left: 0
@@ -16,37 +16,59 @@
 		display: block
 		transform: scale(1)
 		background-color: rgba(0, 0, 0, 0.3)
-.product-popup__body
-	opacity: 0
-	position: relative
-	z-index: 9999999
-	width: 80%
-	max-width: rem(1100px)
-	background-color: #fff
-	margin: 7.5rem auto 1.25rem
-	box-shadow: $shadow
-	padding: rem(50px)
-	&.active
-		animation: fade-in-top 0.6s 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both
-	.product-popup__close
-		position: absolute
-		right: 0
-		top: 0
-		background-color: transparent
-		border: none
-		width: rem(66px)
-		height: rem(66px)
-		display: flex
-		align-items: center
-		justify-content: center
+	.product-cart__body
+		opacity: 0
+		position: relative
+		z-index: 9999999
+		width: rem(1110px)
+		background-color: #fff
+		margin: 7.5rem auto 1.25rem
+		box-shadow: $shadow
+		padding: rem(50px)
+		+media(1200px)
+			width: rem(900px)
+		+media(992px)
+			width: 88%
+			padding: rem(40px)
+			padding-top: rem(50px)
+		+media(768px)
+			padding: rem(30px)
+			padding-top: rem(50px)
+		+media(585px)
+			padding: rem(20px)
+			padding-top: rem(50px)
+		&.active
+			animation: fade-in-top 0.6s 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both
+		.product-cart__close
+			position: absolute
+			right: 0
+			top: 0
+			background-color: transparent
+			border: none
+			width: rem(66px)
+			height: rem(66px)
+			padding: rem(20px)
+			display: flex
+			align-items: flex-start
+			justify-content: flex-end
+			.icon
+				color: $text-ligth
+.product-cart__body
+	.video-icon
+		zoom: .5
+		right: rem(-60px)
+		top: rem(-60px)
+		+media(768px)
+			right: 0
+			top: 0
+		&:hover
+			transform: rotate(360deg)
 	.product__gallery
+		+media(768px)
+			margin-bottom: rem(25px)
 		.swiper-slide
-			width: rem(485px)
-			height: rem(345px)
 			img
 				width: 100%
-				height: 100%
-				object-fit: cover
 			&.video-slide
 				a
 					position: relative
@@ -102,7 +124,7 @@
 	.product__price-block
 		display: flex
 		align-items: center
-		margin-bottom: rem(20px)
+		margin-bottom: rem(25px)
 	.product__price
 		color: $text
 		margin-bottom: 0
@@ -114,16 +136,37 @@
 	.product__buttons
 		display: flex
 		flex-wrap: wrap
+		align-items: flex-start
 		.btn
 			margin-right: rem(25px)
 			margin-bottom: rem(25px)
+			width: rem(145px)
 			&:last-child
 				margin-right: 0
+				margin-bottom: 
+				+media(768px)
+					margin-bottom: rem(25px)
 	.product__advantages
+		+media(1200px)
+			display: flex
+			flex-wrap: wrap
+			margin: 0 rem(-15px)
 		li
 			display: flex
-			align-items: center
+			align-items: flex-start
 			margin-bottom: rem(17px)
+			+media(1200px)
+				width: 50%
+				padding: 0 rem(15px)
+				&:nth-child(n+3)
+					margin-bottom: 0
+			+media(768px)
+				width: 100%
+				&:nth-child(n+3)
+					margin-bottom: rem(17px)
+				&:last-child
+					margin-bottom: 0
+					
 		.product__advantages-img-wrapper
 			width: rem(22px)
 			margin-right: rem(23px)
@@ -136,12 +179,34 @@
 			color: $text-ligth
 	.company_advantages
 		display: flex
+		flex-wrap: wrap
 		justify-content: space-between
-		margin-top: rem(50px)
-		margin-bottom: rem(50px)
+		margin: rem(50px) rem(-10px)
+		+media(1200px)
+			margin: rem(30px) rem(-10px)
+		+media(768px)
+			margin: rem(25px) rem(-10px)
 		li
 			display: flex
-			margin-right: rem(20px)
+			padding-left: rem(10px)
+			padding-right: rem(10px)
+			flex: 0 0 25%
+			max-width: 25%
+			font-size: rem(18px)
+			+media(1200px)
+				flex: 0 0 50%
+				max-width: 50%
+				margin-bottom: rem(17px)
+				&:nth-child(n+3)
+					margin-bottom: 0
+					
+			+media(768px)
+				flex: 0 0 100%
+				max-width: 100%
+				&:nth-child(n+3)
+					margin-bottom: rem(17px)
+				&:last-child
+					margin-bottom: 0
 			&:last-child
 				margin-right: 0
 		.icon
@@ -160,6 +225,13 @@
 			border: 2px solid transparent
 			border-bottom: 2px solid $color-border
 			transition: $transition
+			+media(1200px)
+				width: 33.333%
+				border: 2px solid transparent
+			+media(768px)
+				width: 50%
+			+media(575px)
+				width: 100%
 			&.active
 				color: $accent
 				border: 2px solid $color-border
@@ -188,6 +260,7 @@
 		color: $text-ligth
 		font-weight: 400
 		width: 40%
+		font-size: 1rem
 		&:first-child
 			width: 60%
 			color: $text

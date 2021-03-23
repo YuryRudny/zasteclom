@@ -1,0 +1,23 @@
+.invalid__step
+	animation: shake
+	animation-duration: 1s
+	animation-timing-function: linear
+	.custom__input.active
+		.img-border::before
+			border-color: red
+.invalid-checkboxes
+	.custom__checkbox, .custom__radio, input[type="text"]
+		border-color: red
+.quiz-form
+
+	.swiper-slide
+		opacity: 0 !important
+		.quiz__step
+			transform: translateX(50px)
+			opacity: 0
+			transition: transform .5s ease
+		&.swiper-slide-active
+			opacity: 1 !important
+			.quiz__step
+				opacity: 1
+				transform: translateX(0)

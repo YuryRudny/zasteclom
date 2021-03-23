@@ -25,10 +25,16 @@
 	+media(992px)
 		display: none
 .principles__cart
-	margin-left: rem(20px)
+	margin-left: rem(22px)
 	position: relative
 	padding: rem(30px) rem(30px) rem(30px) rem(70px)
 	border: rem(2px) dashed #d9dfd7
+	&:hover
+		.principles__icon
+			border: none
+			@extend %gr
+			.icon
+				fill: #fff
 .principles__icon
 	position: absolute
 	left: -22px
@@ -42,6 +48,11 @@
 	display: flex
 	align-items: center
 	justify-content: center
+	transition: background-color .3s ease
+	.icon
+		fill: $icon-fill
+		font-size: rem(40px)
+
 .principles__title
 	p
 		display: inline-block

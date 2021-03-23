@@ -1,0 +1,50 @@
+.catalog-product__cart
+	display: flex
+	height: 100%
+	box-shadow: $shadow
+	transition: $shadow-transition
+	&:hover
+		box-shadow: $shadow-hover
+		.catalog-product__link
+			opacity: 1
+			transform: translateX(0)
+		.catalog-product__price
+			opacity: 0
+			visibility: hidden
+	figure
+		display: flex
+		flex-direction: column
+		width: 100%
+		img
+			width: 100%
+	figcaption
+		display: flex
+		flex-direction: column
+		align-items: center
+		flex-grow: 1
+		padding: rem(25px)
+.catalog-product__title
+	margin-bottom: rem(20px)
+	font-family: $title
+	font-size: rem(20px)
+	color: $text
+	text-align: center
+.catalog-price__block
+	position: relative
+	height: rem(50px)
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-top: auto
+.catalog-product__price
+	font-size: rem(20px)
+	font-weight: bold
+	color: $accent
+	font-family: $title
+	opacity: 1
+	visibility: visible
+.catalog-product__link
+	opacity: 0
+	transition: opacity .3s ease
+	position: absolute
+	bottom: 0

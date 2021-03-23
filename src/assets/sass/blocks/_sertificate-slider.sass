@@ -16,8 +16,10 @@
 		padding: rem(20px) 0
 	.swiper-slide
 		transform: scale(.8)
-		transition: transform .8s ease
-		box-shadow: $shadow
+		transition: transform .8s ease 
+		box-shadow: $shadow-slider
+		&:hover
+			box-shadow: $shadow-hover
 		&.swiper-slide-active
 			transform: scale(1)
 .sertivicate-page

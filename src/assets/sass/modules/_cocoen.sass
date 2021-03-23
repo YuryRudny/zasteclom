@@ -1,0 +1,33 @@
+.cocoen 
+	&::before
+		content: 'После'
+		padding: rem(10px)
+		background-color: rgba(#000, .6)
+		color: #fff
+		font-size: rem(16px)
+		position: absolute
+		right: rem(10px)
+		top: rem(10px)
+	> div
+		position: relative
+		&::before
+			content: 'До'
+			padding: rem(10px) 
+			background-color: rgba(#000, .6)
+			color: #fff
+			font-size: rem(16px)
+			position: absolute
+			left: rem(10px)
+			top: rem(10px)
+.cocoen-drag::before
+	border-radius: 50%
+	height: rem(40px)
+	width: rem(40px)
+	margin-left: rem(-20px)
+	margin-top: rem(-20px)
+	background-color: $accent
+	background-image: url('../img/icons/cocoen-drag.png'), $accent-gr
+	background-repeat: no-repeat
+	background-position: center
+	border: none
+	

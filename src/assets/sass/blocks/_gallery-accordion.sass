@@ -1,75 +1,78 @@
 .gallery-accordion
-	background-image: url(../img/backgrounds/gallery-accordion-bg.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+	background-image: url(../img/backgrounds/gallery-accordion-bg.jpg)
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
 	.gallery-container
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: rem(1160px);
-		margin: 0 auto;
-		padding: 0 rem(15px);
+		display: flex
+		justify-content: center
+		align-items: center
+		width: rem(1160px)
+		margin: 0 auto
+		padding: 0 rem(15px)
 		+media(1200px)
-			flex-direction: column-reverse;
-			align-items: center;
+			flex-direction: column
+			align-items: center
 			max-width: 100%
-			padding: 0;
+			padding: 0
 
 .gallery-accordion__title
-	margin-bottom: rem(30px);
-	width: 25%;
+	margin-bottom: rem(30px)
+	width: 25%
 	+media(1200px)
-		width: 100%;
-		align-self: stretch;
+		width: 100%
+		align-self: stretch
 	p
-		font-family: $title;
-		font-size: rem(24px);
-		font-weight: bold;
-		text-align: right;
+		font-family: $title
+		font-size: rem(24px)
+		font-weight: bold
+		text-align: left
+		line-height: 1.1
 		+media(1200px)
-			text-align: center;
-			padding-top: rem(30px);
+			text-align: center
+			padding-top: rem(30px)
+			br
+				display: none
 .gallery-accordion__list
-	display: flex;
-	height: 100%;
-	overflow: hidden;
-	width: 75%;
-	padding-right: rem(30px);
+	display: flex
+	height: 100%
+	overflow: hidden
+	width: 75%
+	padding-right: rem(30px)
 	+media(1200px)
-		width: 100%;
-		align-self: stretch;
-		padding-right: 0;
+		width: 100%
+		align-self: stretch
+		padding-right: 0
 
 .gallery-accordion__item
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
-	padding-bottom: rem(40px);
+	display: flex
+	justify-content: center
+	align-items: flex-end
+	padding-bottom: rem(40px)
 	width: 15%
 	transition: $transition
-	height: rem(277px);
+	height: rem(277px)
 	&:hover
-		width: 56%;
+		width: 56%
 	&:nth-child(1)
-		background-color: rgba(#000, .95);
+		background-color: rgba(#000, .20)
 	&:nth-child(2)
-		background-color: rgba(#000, .85);
+		background-color: rgba(#000, .30)
 	&:nth-child(3)
-		background-color: rgba(#000, .8);
+		background-color: rgba(#000, .40)
 	&:nth-child(4)
-		background-color: rgba(#000, .7);
+		background-color: rgba(#000, .45)
 	&:nth-child(5)
-		background-color: rgba(#000, .65);
+		background-color: rgba(#000, .55)
 	&:nth-child(6)
-		background-color: rgba(#000, .6);
+		background-color: rgba(#000, .60)
 	&:nth-child(7)
-		background-color: rgba(#000, .5);
-		margin-right: -5px;
+		background-color: rgba(#000, .70)
+		margin-right: -5px
 	span
-		color: #fff;
-		font-size: 24px;
-		font-weight: bold;
-		font-family: $title;
+		color: #fff
+		font-size: 24px
+		font-weight: bold
+		font-family: $title
 		+media(585px)
-			font-size: rem(16px);
+			font-size: rem(16px)

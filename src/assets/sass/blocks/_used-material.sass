@@ -9,6 +9,7 @@
 	.used-material__cart
 		padding: 15px 15px
 		display: flex
+		height: auto
 	.swiper-slide
 		display: flex
 	.icon-decore
@@ -16,6 +17,10 @@
 		color: #a2a2a2
 .used-material__cart
 	position: relative
+	display: flex
+	height: 100%
+	img
+		width: 100%
 	&--inner
 		.btn
 			flex-grow: 1
@@ -23,6 +28,8 @@
 		.img-scale__wrapper
 			img
 				transform: scale(1.05)
+		figure
+			box-shadow: $shadow-hover
 		.used-material__title
 			color: $accent
 		.icon
@@ -31,9 +38,16 @@
 			color: $accent
 	figure
 		background-color: #fff
-		box-shadow: $shadow
+		box-shadow: $shadow-slider
+		transition: $shadow-transition
+		display: flex
+		flex-direction: column
 	figcaption
 		padding: 0 rem(32px) rem(33px) rem(46px)
+		flex-grow: 1
+		display: flex
+		flex-direction: column
+
 
 .used-material__img
 	width: 100%
@@ -41,6 +55,7 @@
 	object-fit: cover
 .used-material__title
 	transition: $transition
+	margin-bottom: rem(10px)
 	p
 		display: inline-block
 		position: relative
@@ -63,7 +78,7 @@
 			background-repeat: no-repeat
 			z-index: -1
 .used-material__text
-	margin-bottom: rem(37px)
+	margin-bottom: auto
 	p
 		font-size: rem(18px)
 		font-weight: 300
@@ -75,7 +90,8 @@
 	justify-content: space-between
 	align-items: flex-end
 	position: relative
-	z-index: 
+	z-index: 2
+	margin-top: rem(20px)
 .used-material__link
 	font-family: $font
 	color: $color-title

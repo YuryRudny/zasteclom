@@ -70,7 +70,7 @@ export function principles() {
 	const arrowNext = document.querySelector('.principles .slider-button-next');
 	const arrowPrev = document.querySelector('.principles .slider-button-prev');
 	const principles = new Swiper('.principles .swiper-container', {
-		loop: true,
+
 		speed: 1200,
 		direction: 'vertical',
 		slidesPerView: 2,
@@ -186,6 +186,35 @@ export function news() {
 		});
 	}
 }
+export function aboutSlider() {
+	const arrowNext = document.querySelector('.about-slider .slider-button-next');
+	const arrowPrev = document.querySelector('.about-slider .slider-button-prev');
+	const newsSlider = new Swiper('.about-slider .swiper-container', {
+		loop: true,
+		speed: 1200,
+		slidesPerView: 1,
+		grabCursor: true,
+		spaceBetween: 30,
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+			},
+			1020: {
+				slidesPerView: 3,
+			}
+		}
+	});
+	if (arrowNext) {
+		arrowNext.addEventListener('click', () => {
+			newsSlider.slideNext();
+		});
+	}
+	if (arrowPrev) {
+		arrowPrev.addEventListener('click', () => {
+			newsSlider.slidePrev();
+		});
+	}
+}
 
 export function partners() {
 	const arrowNext = document.querySelector('.partners .slider-button-next');
@@ -220,6 +249,104 @@ export function partners() {
 		});
 	}
 }
+export function productSlider() {
+	const partners = new Swiper('.product__page .swiper-container', {
+		loop: true,
+		speed: 1200,
+		slidesPerView: 1,
+		effect: 'flip',
+		grabCursor: true,
+		spaceBetween: 0,
+		autoHeight: true,
+		observer: true,
+		observeParents: true,
+		slideToClickedSlide: true,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+	const cocoen = document.querySelector('.product__page .cocoen');
+	if (cocoen) {
+		new Cocoen(cocoen);
+	}
+}
+export function portfolioSlider() {
+
+	const galleryThumbs = new Swiper('.portfolio-inner-page .gallery-thumbs', {
+		spaceBetween: 10,
+		slidesPerView: 4,
+		freeMode: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		slideToClickedSlide: true,
+		breakpoints: {
+			1200: {
+				slidesPerView: 4,
+			}
+		}
+	});
+	const galleryTop = new Swiper('.portfolio-inner-page .gallery-top', {
+		spaceBetween: 10,
+		effect: 'flip',
+		speed: 1200,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		thumbs: {
+			swiper: galleryThumbs
+		},
+		on: {
+			slideChange: function () {
+				let activeIndex = this.activeIndex + 1;
+				let nextSlide = this.thumbs.swiper.$el[0].querySelector(`.swiper-slide:nth-child(${activeIndex + 1})`);
+				let prevSlide = this.thumbs.swiper.$el[0].querySelector(`.swiper-slide:nth-child(${activeIndex - 1})`);
+
+				if (nextSlide && !nextSlide.classList.contains('swiper-slide-visible')) {
+					this.thumbs.swiper.slideNext();
+				} else if (prevSlide && !prevSlide.classList.contains('swiper-slide-visible')) {
+					this.thumbs.swiper.slidePrev();
+				}
+			}
+		}
+	});
+	const galleryPersonal = new Swiper('.portfolio-inner-page .portfolio__personal .swiper-container', {
+		loop: true,
+		speed: 1200,
+		slidesPerView: 1,
+		grabCursor: true,
+		spaceBetween: 25,
+		autoHeight: true,
+		observer: true,
+		observeParents: true,
+		slideToClickedSlide: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			1200: {
+				slidesPerView: 2,
+				spaceBetween: 25,
+			},
+			992: {
+				slidesPerView: 1,
+				spaceBetween: 25,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 30,
+			}
+		}
+	});
+
+
+}
 
 export function semiSlider() {
 	const arrowNext = document.querySelector('.semi-slider .slider-button-next');
@@ -244,89 +371,4 @@ export function semiSlider() {
 			semiSlider.slidePrev();
 		});
 	}
-}
-
-export function productPopup() {
-
-	let productPopup;
-
-	const opt = {
-		loop: true,
-		speed: 1200,
-		slidesPerView: 1,
-		effect: 'flip',
-		grabCursor: true,
-		spaceBetween: 0,
-		autoHeight: true,
-		observer: true,
-		observeParents: true,
-		slideToClickedSlide: true,
-		pagination: {
-			el: '.swiper-pagination',
-			clickable: true,
-		},
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-	};
-
-	const body = document.querySelector('body');
-
-	let modalToggle = false;
-
-	body.addEventListener('click', e => {
-		const popupCollection = document.querySelectorAll('.product-popup');
-		const popupBodyCollection = document.querySelectorAll('.product-popup__body');
-		const target = e.target;
-		if (target.closest('.product__cart')) {
-
-			const parent = target.closest('.product__cart');
-			const slider = parent.querySelector('.swiper-container');
-
-
-			const openPopup = function () {
-				body.classList.add('fix');
-				parent.querySelector('.product-popup').classList.add('active');
-				parent.querySelector('.product-popup__body').classList.add('active');
-				productPopup = new Swiper(slider, opt);
-				modalToggle = true;
-				if (!parent.classList.contains('opening')) {
-					new Cocoen(parent.querySelector('.cocoen'));
-				}
-				parent.classList.add('opening');
-			};
-
-			if (target.classList.contains('productVastView')) {
-				openPopup();
-			}
-			if (target.classList.contains('product-popup__close') ||
-				target.classList.contains('icon-close') ||
-				target.classList.contains('product-popup') ||
-				target.parentNode.classList.contains('icon-close')) {
-				closePopup();
-			}
-		}
-	});
-
-	function closePopup() {
-		const popupCollection = document.querySelectorAll('.product-popup');
-		const popupBodyCollection = document.querySelectorAll('.product-popup__body');
-		body.classList.remove('fix');
-		popupCollection.forEach(item => {
-			item.classList.remove('active');
-		});
-		popupBodyCollection.forEach(item => {
-			item.classList.remove('active');
-		});
-		productPopup.destroy(true, true);
-		modalToggle = false;
-	}
-
-
-	window.onkeydown = function (event) {
-		if (event.keyCode == 27 && modalToggle) {
-			closePopup();
-		}
-	};
 }

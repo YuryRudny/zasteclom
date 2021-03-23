@@ -12,8 +12,29 @@
 	line-height: 1
 	cursor: pointer
 	box-sizing: content-box
+	&.filter-reset.hidden
+		display: inline-block !important
+		box-shadow: none
+		color: $text
+		position: relative
+		@extend %gr
+		span
+			position: relative
+			z-index: 2
+		&::after
+			content: ''
+			position: absolute
+			left: rem(2.5px)
+			top: rem(2px)
+			bottom: rem(2px)
+			right: rem(2px)
+			background-color: #fff
+			z-index: 0
+			border-radius: rem(32px)
+		&:hover
+			color: #fff
 	&:active
-		transform: translateY(2px);
+		transform: translateY(2px)
 .btn--white
 	color: #ffffff
 	box-shadow: inset 0px 0 0px 2px #fff
@@ -22,20 +43,20 @@
 		@extend %gr
 		box-shadow: none
 .btn--gradient
-	overflow: hidden;
+	overflow: hidden
 	@extend %gr
 	color: #ffffff
 	&:hover
 		box-shadow: inset 0px 0 0px 2px $text
 		color: $text
-		background-color: transparent;
-		background-image: none;
+		background-color: transparent
+		background-image: none
 .btn--white-hover
 	&:hover
 		box-shadow: inset 0px 0 0px 2px #fff
 		color: #fff
-		background-color: transparent;
-		background-image: none;
+		background-color: transparent
+		background-image: none
 .btn--gray
 	box-shadow: inset 0px 0 0px 2px #7c7b7b
 	color: #7c7b7b
@@ -53,4 +74,29 @@
 .btn-close
 	background-color: transparent
 	padding: 0
+.btn--flare
+	position: relative
+	overflow: hidden
+	&:before 
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: rem(30px)
+		height: 100%
+		background-color: #fff
+		transform: translateX(-4em) skewX(-45deg)
+		animation-name: move-light
+		animation-duration: 3s
+		animation-timing-function: ease-in-out
+		animation-delay: .05s
+		animation-iteration-count: infinite
+		filter: blur(5px)
 
+@keyframes move-light
+	0% 
+		transform: translateX(-4em) skewX(-45deg)
+	30% 
+		transform: translateX(rem(370px)) skewX(-45deg)
+	100%
+		transform: translateX(rem(370px)) skewX(-45deg)
